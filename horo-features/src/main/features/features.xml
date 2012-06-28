@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<features name="horo-features-1.0-SNAPSHOT">
+    <!--
+    <feature name="smxb-ping-pong" version="1.0">
+    	<feature version="1.0">smxb-ping</feature>
+    	<feature version="1.0">smxb-pong</feature>
+    </feature>
+    -->
+    <feature name="horo-features" version="1.0-SNAPSHOT">
+      <feature version="${camel-version}">camel-mybatis</feature>
+      <feature version="${camel-version}">camel-tagsoup</feature>
+      <bundle>mvn:org.mybatis/mybatis-spring/${mybatis-spring-version}</bundle>
+      <bundle>mvn:org.springframework/spring-jdbc/${spring-version}</bundle>
+      <bundle>mvn:net.jakubkorab/horo-rss-reader/1.0-SNAPSHOT</bundle>
+    </feature>
+</features>

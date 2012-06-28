@@ -28,11 +28,25 @@ public class RssConsumerRouteBuilderTest extends CamelTestSupport {
 	}
 
 	@Test
-	public void test() throws InterruptedException, IOException {
+	public void testAstrologyComSimple() throws InterruptedException, IOException {
 		MockEndpoint mock = getMockEndpoint("mock:out");
 		mock.setExpectedMessageCount(12);
 
 		String body = loadFileAsString("src/test/resources/astrology.com/2012-06-25.xml");
+		template.sendBody("direct:in", body);
+
+		mock.setResultWaitTime(1000);
+		mock.assertIsSatisfied();
+		log.info(mock.getReceivedExchanges().get(0).getIn().getBody()
+				.toString());
+	}
+
+	@Test
+	public void testAstrologyComExtended() throws InterruptedException, IOException {
+		MockEndpoint mock = getMockEndpoint("mock:out");
+		mock.setExpectedMessageCount(12);
+
+		String body = loadFileAsString("src/test/resources/astrology.com/2012-06-25-extended.xml");
 		template.sendBody("direct:in", body);
 
 		mock.setResultWaitTime(1000);
