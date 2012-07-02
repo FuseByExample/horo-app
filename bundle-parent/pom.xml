@@ -33,6 +33,12 @@
       <artifactId>log4j</artifactId>
       <version>${log4j-version}</version>
     </dependency>
+
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-test</artifactId>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
 
   <build>
