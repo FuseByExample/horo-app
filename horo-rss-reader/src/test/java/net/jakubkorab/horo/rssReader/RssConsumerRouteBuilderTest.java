@@ -32,7 +32,7 @@ public class RssConsumerRouteBuilderTest extends CamelTestSupport {
 		MockEndpoint mock = getMockEndpoint("mock:out");
 		mock.setExpectedMessageCount(12);
 
-		String body = loadFileAsString("src/test/resources/astrology.com/2012-06-25.xml");
+		String body = loadFileAsString("src/test/resources/com/astrology/2012-06-25.xml");
 		template.sendBody("direct:in", body);
 
 		mock.setResultWaitTime(1000);
@@ -46,7 +46,7 @@ public class RssConsumerRouteBuilderTest extends CamelTestSupport {
 		MockEndpoint mock = getMockEndpoint("mock:out");
 		mock.setExpectedMessageCount(12);
 
-		String body = loadFileAsString("src/test/resources/astrology.com/2012-06-25-extended.xml");
+		String body = loadFileAsString("src/test/resources/com/astrology/extended/2012-06-25.xml");
 		template.sendBody("direct:in", body);
 
 		mock.setResultWaitTime(1000);

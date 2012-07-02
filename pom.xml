@@ -11,6 +11,7 @@
   <name>${application-name}</name>
 
   <modules>
+    <module>horo-db</module>
     <module>horo-rss-reader</module>
     <module>horo-features</module>
   </modules>
@@ -25,6 +26,11 @@
     <mybatis-spring-version>1.0.1</mybatis-spring-version> <!-- needs to match above; see http://www.mybatis.org/spring/ -->
     <spring-version>3.0.5.RELEASE</spring-version> <!-- required to install mybatis-spring into smx --> 
 
+    <!-- db -->
+    <postgresql-version>9.1-901.jdbc4</postgresql-version>
+    <commons-dbcp-version>1.4</commons-dbcp-version>
+
+    <!-- common -->
     <slf4j-version>1.6.1</slf4j-version>
     <log4j-version>1.2.16</log4j-version>
     <junit-version>4.7</junit-version>

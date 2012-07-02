@@ -22,3 +22,29 @@ There are two additional parent projects that simplify the Maven project configu
 Prerequisites
 =============
 An open mind.
+
+TODO
+====
+--features--
+--Datasource configuration--
+Table insert
+Testing against an embedded database
+Date parsing
+Integration testing
+Migrations - http://www.mybatis.org/migrations/
+
+horoscopes.co.uk - scraping
+horoscope.com - scraping, 1st <div id="textline">
+
+http://www.mirror.co.uk/lifestyle/horoscopes/daily/aries/
+<div class="horoscopes-intro">
+<h2>Today's Horoscope</h2>
+<p>Make a special point of occupying yourself with tasks you find easy to do. Focus on jobs that will not need a lot of concentration or specialist knowledge. Complicated ventures will only have you running around in circles. These are best left alone until you feel more able to handle the challenge.
+</p>
+
+Move resources/astrology.com 
+	-> resources/com/astrology
+	-> resources/com/astrology/extended
+
+Write out starsign scrubbing login.
+Error handling for odd scrapers.

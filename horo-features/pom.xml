@@ -82,7 +82,7 @@
                             <goal>create-kar</goal>
                         </goals>
                         <configuration>
-                            <featuresFile>src/main/features/features.xml</featuresFile>
+                            <featuresFile>target/features/features.xml</featuresFile>
                         </configuration>
                     </execution>
                 </executions>

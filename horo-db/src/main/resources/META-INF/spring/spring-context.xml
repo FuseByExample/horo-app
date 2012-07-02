@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
+        xmlns:ctx="http://www.springframework.org/schema/context"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xmlns:osgi="http://www.springframework.org/schema/osgi"
         xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
         http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd">
 
+    <ctx:annotation-config/>
+    
     <bean id="dataSource" destroy-method="close" class="org.apache.commons.dbcp.BasicDataSource">
         <property name="driverClassName" value="${jdbc.driverClassName}"/>
         <property name="url" value="${jdbc.url}"/>
@@ -13,20 +17,8 @@
         <property name="password" value="${jdbc.password}"/>
     </bean>
 
-    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+    <bean class="net.jakubkorab.horo.db.DataSourceChecker">
         <property name="dataSource" ref="dataSource" />
-        <property name="mapperLocations" value="classpath*:META-INF/mappers/**/*.xml" />
     </bean>
-    
-    <camelContext id="bookings" xmlns="http://camel.apache.org/schema/spring">
-        <propertyPlaceholder id="properties" location="ref:osgi.properties"/>
 
-        <routeBuilder ref="rssReaderComAstrology" />
-    </camelContext>
-
-    <bean id="rssReaderComAstrology" class="net.jakubkorab.horo.rssReader.RssConsumerRouteBuilder">
-        <property name="sourceName" value="com.astronomy"/>
-        <property name="sourceUri" value="rss://http://www.astrology.com/horoscopes/daily-horoscope.rss"/>
-        <property name="targetUri" value="mybatis:foo"/>
-    </bean>
 </beans>
