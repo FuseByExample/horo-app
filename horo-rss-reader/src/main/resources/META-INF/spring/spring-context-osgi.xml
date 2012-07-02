@@ -20,4 +20,6 @@
 
   <ctx:property-placeholder properties-ref="osgi.properties" />
 
+  <osgi:reference id="dataSource" interface="javax.sql.DataSource" filter="(database='horo-app')"/>
+
 </beans>
