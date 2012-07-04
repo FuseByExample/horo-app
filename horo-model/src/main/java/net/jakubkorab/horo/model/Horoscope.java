@@ -1,5 +1,7 @@
 package net.jakubkorab.horo.model;
 
+import java.util.Date;
+
 public class Horoscope {
 
 	private Long id;

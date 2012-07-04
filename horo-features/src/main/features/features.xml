@@ -17,6 +17,7 @@
       <feature version="${camel-version}">camel-tagsoup</feature>
       <bundle>mvn:org.mybatis/mybatis-spring/${mybatis-spring-version}</bundle>
       <bundle>mvn:org.springframework/spring-jdbc/${spring-version}</bundle>
+      <bundle>mvn:net.jakubkorab/horo-model/1.0-SNAPSHOT</bundle>
       <bundle>mvn:net.jakubkorab/horo-rss-reader/1.0-SNAPSHOT</bundle>
     </feature>
 </features>

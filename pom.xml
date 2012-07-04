@@ -12,6 +12,7 @@
 
   <modules>
     <module>horo-db</module>
+    <module>horo-model</module>
     <module>horo-rss-reader</module>
     <module>horo-features</module>
   </modules>
@@ -34,7 +35,9 @@
     <slf4j-version>1.6.1</slf4j-version>
     <log4j-version>1.2.16</log4j-version>
     <junit-version>4.7</junit-version>
-
+    <commons-lang-version>2.6</commons-lang-version>
+    <joda-time-version>2.1</joda-time-version>
+    
     <!-- Enforcer plugin version resolution -->
     <axiom-version>1.2.12</axiom-version>
     <commons-logging-version>1.1.1</commons-logging-version>
@@ -62,15 +65,6 @@
     </pluginRepository>
   </pluginRepositories>
 
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
-
-
   <dependencyManagement>
     <dependencies>
       <!-- test dependencies -->
@@ -79,6 +73,12 @@
         <artifactId>junit</artifactId>
         <version>${junit-version}</version>
         <scope>test</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>joda-time</groupId>
+        <artifactId>joda-time</artifactId>
+        <version>${joda-time-version}</version>
       </dependency>
 
       <dependency>
@@ -133,10 +133,32 @@
         <artifactId>axiom-impl</artifactId>
         <version>${axiom-version}</version>
       </dependency>
+
+      <dependency>
+        <groupId>commons-lang</groupId>
+        <artifactId>commons-lang</artifactId>
+        <version>${commons-lang-version}</version>
+      </dependency>
       <dependency>
         <groupId>commons-logging</groupId>
         <artifactId>commons-logging</artifactId>
         <version>${commons-logging-version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-api</artifactId>
+        <version>${slf4j-version}</version> 
+      </dependency>
+      <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-log4j12</artifactId>
+        <version>${slf4j-version}</version>
+      </dependency>
+      <dependency>
+        <groupId>log4j</groupId>
+        <artifactId>log4j</artifactId>
+        <version>${log4j-version}</version>
       </dependency>
 
       <dependency>
@@ -199,6 +221,11 @@
           </executions>
         </plugin>
 
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-resources-plugin</artifactId>
+          <version>${maven-resources-plugin-version}</version>
+        </plugin>
       </plugins>
     </pluginManagement>
   </build>
