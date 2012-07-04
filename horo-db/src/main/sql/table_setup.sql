@@ -30,7 +30,6 @@ values ('Aries', 3, 19, 4, 19),
 	('Aquarius', 1, 20, 2, 18),
 	('Pisces', 2, 19, 3, 20);
 
--- TODO should this maybe be 'readings' instead?
 create table horoscopes ( 
 	horoscope_id serial primary key, 
 	feed_id integer not null, 
@@ -41,9 +40,12 @@ create table horoscopes (
 	foreign key (sign_id) references signs (sign_id) 
 );
 
-/*
-insert into horoscopes(feed_id, predicts_for, entry)
-select feed_id, current_date - 1, 'If the daily grind is getting you down right now, seek the comfort of your home, friends and family. These things will help you feel more grounded and content. So bow out of wild adventures right now -- and get back in touch with the truly important things in life. Your people would love a chance to spend some more time with you. Also, quite a few of your relationships could use a bit more of your attention, and the timing is perfect for that now.'
-	from feeds
-	where name = 'Foo!'
-*/
+-- sample data
+insert into feeds(name, active)
+values ('com.astrology', true);
+
+insert into horoscopes (sign_id, feed_id, predicts_for, entry)
+select s.sign_id, f.feed_id,  current_date - 1, 'If the daily grind is getting you down right now, seek the comfort of your home, friends and family. These things will help you feel more grounded and content. So bow out of wild adventures right now -- and get back in touch with the truly important things in life. Your people would love a chance to spend some more time with you. Also, quite a few of your relationships could use a bit more of your attention, and the timing is perfect for that now.'
+    from signs s, feeds f
+    where s.name = 'Aries'
+	and f.name = 'com.astrology';

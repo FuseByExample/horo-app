@@ -35,9 +35,9 @@ public class StarSignTest {
 		assertFalse(starSign.appliesTo(new DateTime(2012, 4, 20, 0, 0)));
 	}
 
-	@Test
+	@Test(expected = IllegalStateException.class)
 	public void testGetInstanceEmptySet() {
-		assertNull(StarSign.getInstance("Aries"));
+		StarSign.getInstance("Aries");
 	}
 
 	@Test

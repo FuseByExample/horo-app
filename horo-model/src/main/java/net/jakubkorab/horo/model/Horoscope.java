@@ -1,11 +1,11 @@
 package net.jakubkorab.horo.model;
 
-import java.util.Date;
+import org.joda.time.DateTime;
 
 public class Horoscope {
 
 	private Long id;
-	private Date predictsFor;
+	private DateTime predictsFor;
 	private StarSign starSign;
 	private String entry;
 
@@ -17,11 +17,11 @@ public class Horoscope {
 		this.id = id;
 	}
 
-	public Date getPredictsFor() {
+	public DateTime getPredictsFor() {
 		return predictsFor;
 	}
 
-	public void setPredictsFor(Date predictsFor) {
+	public void setPredictsFor(DateTime predictsFor) {
 		this.predictsFor = predictsFor;
 	}
 
@@ -29,8 +29,8 @@ public class Horoscope {
 		return starSign;
 	}
 
-	public void setStarSign(StarSign starSign) {
-		this.starSign = starSign;
+	public void setStarSign(String name) {
+		this.starSign = StarSign.getInstance(name);
 	}
 
 	public String getEntry() {
