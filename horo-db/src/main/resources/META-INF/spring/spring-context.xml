@@ -23,11 +23,8 @@
 
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource" />
-<!--
-TODO fix for maven
+        <property name="configLocation" value="/META-INF/SqlMapConfig.xml" />
         <property name="mapperLocations" value="classpath*:META-INF/mappers/**/*.xml" />
-        <property name="configLocation" value="classpath*:META-INF/SqlMapConfig.xml" />
--->
     </bean>
 
 </beans>
