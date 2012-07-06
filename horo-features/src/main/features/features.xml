@@ -3,22 +3,22 @@
 
     <feature name="horo-model" version="1.0-SNAPSHOT">
         <bundle>mvn:net.jakubkorab/horo-model/1.0-SNAPSHOT</bundle>
-        <!-- TODO check metadata -->
         <bundle>mvn:joda-time/joda-time/${joda-time-version}</bundle>
+        <bundle>mvn:commons-lang/commons-lang/${commons-lang-version}</bundle>
     </feature>
 
     <feature name="horo-db" version="1.0-SNAPSHOT">
         <feature version="1.0-SNAPSHOT">horo-model</feature>
+        <feature version="${camel-version}">camel-mybatis</feature>
         <bundle>wrap:mvn:postgresql/postgresql/${postgresql-version}</bundle>
         <bundle>wrap:mvn:commons-dbcp/commons-dbcp/${commons-dbcp-version}</bundle>
         <bundle>mvn:net.jakubkorab/horo-db/1.0-SNAPSHOT</bundle>
-        <!-- TODO check metadata -->
         <bundle>mvn:org.mybatis/mybatis/${mybatis-version}</bundle>
         <bundle>mvn:org.mybatis/mybatis-spring/${mybatis-spring-version}</bundle>
+        <bundle>mvn:org.springframework/spring-jdbc/${spring-version}</bundle>
     </feature>
 
     <feature name="horo-rss-reader" version="1.0-SNAPSHOT">
-        <feature version="${camel-version}">camel-mybatis</feature>
         <feature version="${camel-version}">camel-tagsoup</feature>
         <feature version="${camel-version}">camel-jetty</feature>
         <feature version="${camel-version}">camel-xstream</feature>

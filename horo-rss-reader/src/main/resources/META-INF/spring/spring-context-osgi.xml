@@ -19,8 +19,7 @@
 
     <ctx:property-placeholder properties-ref="osgi.properties"/>
 
-    <osgi:reference id="dataSource" interface="javax.sql.DataSource" filter="(database='horo-app')"/>
     <osgi:reference id="mybatis" interface="org.apache.camel.Component"
-                    filter="(&amp;(component='mybatis')(database='horo-app'))"/>
+                    filter="(&amp;(component=mybatis)(database=horo-app))"/>
 
 </beans>
