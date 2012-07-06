@@ -2,18 +2,9 @@ package net.jakubkorab.horo.model;
 
 public class Feed {
 
-	private Long id;
 	private String name;
 
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public String getName() {
+    public String getName() {
 		return name;
 	}
 

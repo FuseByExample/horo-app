@@ -18,7 +18,7 @@ public class StarSignTypeHandler extends BaseTypeHandler {
     public void setNonNullParameter(PreparedStatement preparedStatement, int i, Object starSignObject, JdbcType jdbcType) throws SQLException {
         Validate.notNull(starSignObject, "starSignObject is null");
         StarSign starSign = (StarSign) starSignObject;
-        if (jdbcType.equals(JdbcType.VARCHAR)) {
+        if ((jdbcType == null) || (jdbcType.equals(JdbcType.VARCHAR))) {
             preparedStatement.setString(i, starSign.getName());
         }   else {
             throw new UnsupportedOperationException("Unable to convert StarSign to " + jdbcType.toString());

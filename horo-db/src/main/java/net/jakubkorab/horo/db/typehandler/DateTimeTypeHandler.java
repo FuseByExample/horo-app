@@ -15,7 +15,7 @@ public class DateTimeTypeHandler extends BaseTypeHandler {
     public void setNonNullParameter(PreparedStatement preparedStatement, int i, Object dateTimeObject, JdbcType jdbcType) throws SQLException {
         Validate.notNull(dateTimeObject, "dateTimeObject is null");
         DateTime dateTime = (DateTime) dateTimeObject;
-        if (jdbcType.equals(JdbcType.DATE)) {
+        if ((jdbcType == null) || (jdbcType.equals(JdbcType.DATE))) {
             preparedStatement.setDate(i, new java.sql.Date(dateTime.getMillis()));
         }   else {
             throw new UnsupportedOperationException("Unable to convert DateTime to " + jdbcType.toString());

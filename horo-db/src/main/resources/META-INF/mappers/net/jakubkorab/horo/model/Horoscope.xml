@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="net.jakubkorab.horo.db">
+<mapper namespace="horoscope">
 
     <!-- Result maps describe the mapping between the columns returned
    from a query, and the class properties.  A result map isn't
@@ -17,20 +17,14 @@
         <result property="entry" column="entry"/>
     </resultMap>
 
-    <!-- Select with no parameters using the result map for Account class. -->
-    <select id="selectAllSigns" resultMap="HoroscopeResult">
-        select *
-        from signs
-    </select>
-
-    <select id="selectAllHoroscopes" resultMap="HoroscopeResult">
+    <select id="selectAll" resultMap="HoroscopeResult">
         select h.horoscope_id, s.name, h.predicts_for, h.entry 
             from horoscopes h
             inner join signs s on (h.sign_id = s.sign_id)
     </select>
 
     <!-- Insert example, using the Account parameter class -->
-    <insert id="insertHoroscope" parameterType="Horoscope">
+    <insert id="insert" parameterType="Horoscope">
         insert into horoscopes (
             sign_id,
             feed_id,
@@ -43,36 +37,25 @@
                 and f.name = #{feed.name}
     </insert>
 
-    <!-- START SNIPPET: insertList -->
-    <!-- Batch Insert example, using the Account parameter class -->
-    <!--
-    <insert id="batchInsertAccount" parameterType="java.util.List">
-        insert into ACCOUNT (
-        ACC_ID,
-        ACC_FIRST_NAME,
-        ACC_LAST_NAME,
-        ACC_EMAIL
-        )
-        values (
-        <foreach item="Account" collection="list" open="" close="" separator="),(">
-            #{Account.id}, #{Account.firstName}, #{Account.lastName}, #{Account.emailAddress}
-        </foreach>
-        )
-    </insert>
-    -->
-    <!-- END SNIPPET: insertList -->
+    <sql id="withHoroscope">
+        from horoscopes h
+        inner join signs s on (h.sign_id = s.sign_id)
+        inner join feeds f on (h.feed_id = f.feed_id)
+        where h.predicts_for = #{predictsFor}
+            and s.name = #{starSign.name}
+            and f.name = #{feed.name}
+    </sql>
 
-
-    <!-- Delete example, using an integer as the parameter class -->
-    <!--
-    <delete id="deleteAccountById" parameterType="int">
-        delete from ACCOUNT where ACC_ID = #{id}
-    </delete>
--->
-
-    <!--
-    <select id="count" resultType="int">
-        select count(*) from ACCOUNT
+    <select id="count" resultType="int" parameterType="Horoscope">
+        select count(*) <include refid="withHoroscope"/>
     </select>
-    -->
+
+    <delete id="delete" parameterType="Horoscope">
+        delete from horoscopes
+            where (predicts_for, sign_id, feed_id) in (
+                select h.predicts_for, s.sign_id, f.feed_id
+                <include refid="withHoroscope"/>
+        )
+    </delete>
+
 </mapper>

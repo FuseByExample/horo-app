@@ -7,6 +7,7 @@ public class Horoscope {
 	private DateTime predictsFor;
 	private StarSign starSign;
 	private String entry;
+    private Feed feed;
 
 	public Long getId() {
 		return id;
@@ -39,5 +40,13 @@ public class Horoscope {
 	public void setEntry(String entry) {
 		this.entry = entry;
 	}
+
+    public void setFeed(Feed feed) {
+        this.feed = feed;
+    }
+
+    public Feed getFeed() {
+        return feed;
+    }
 
 }

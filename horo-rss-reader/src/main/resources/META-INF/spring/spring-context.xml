@@ -5,15 +5,6 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
         http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd">
 
-    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-        <property name="dataSource" ref="dataSource" />
-        <property name="mapperLocations" value="classpath*:META-INF/mappers/**/*.xml" />
-    </bean>
-
-    <bean id="mybatis" class="org.apache.camel.component.mybatis.MyBatisComponent">
-        <property name="sqlSessionFactory" ref="sqlSessionFactory" />
-    </bean>
-    
     <camelContext id="bookings" xmlns="http://camel.apache.org/schema/spring">
         <propertyPlaceholder id="properties" location="ref:osgi.properties"/>
 
