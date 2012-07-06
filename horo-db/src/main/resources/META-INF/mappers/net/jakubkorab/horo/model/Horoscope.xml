@@ -3,21 +3,26 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="Horoscope">
+<mapper namespace="net.jakubkorab.horo.db">
 
     <!-- Result maps describe the mapping between the columns returned
    from a query, and the class properties.  A result map isn't
    necessary if the columns (or aliases) match to the properties
    exactly. -->
     <resultMap id="HoroscopeResult" type="Horoscope">
-        <result property="id" column="horoscope_id"/>
+        <id property="id" column="horoscope_id"/>
         <!-- feed_id -->
-        <result property="sign" column="sign_name"/>
+        <result property="starSign" column="name"/>
         <result property="predictsFor" column="predicts_for"/>
         <result property="entry" column="entry"/>
     </resultMap>
 
     <!-- Select with no parameters using the result map for Account class. -->
+    <select id="selectAllSigns" resultMap="HoroscopeResult">
+        select *
+        from signs
+    </select>
+
     <select id="selectAllHoroscopes" resultMap="HoroscopeResult">
         select h.horoscope_id, s.name, h.predicts_for, h.entry 
             from horoscopes h

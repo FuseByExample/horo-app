@@ -1,36 +1,37 @@
 package net.jakubkorab.horo.db.typehandler;
 
-import java.sql.CallableStatement;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-
+import org.apache.commons.lang.Validate;
+import org.apache.ibatis.type.BaseTypeHandler;
 import org.apache.ibatis.type.JdbcType;
 import org.apache.ibatis.type.MappedTypes;
-import org.apache.ibatis.type.TypeHandler;
 import org.joda.time.DateTime;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
+import java.sql.*;
 
 @MappedTypes(DateTime.class)
-public class DateTimeTypeHandler implements TypeHandler {
-	private Logger log = LoggerFactory.getLogger(this.getClass());
+public class DateTimeTypeHandler extends BaseTypeHandler {
 
-	@Override
-	public Object getResult(ResultSet rs, String columnName) throws SQLException {
-		String unparsedDate = rs.getString(columnName);
-		log.info("parsing date {}", unparsedDate);
-		return new DateTime();
-	}
+    @Override
+    public void setNonNullParameter(PreparedStatement preparedStatement, int i, Object dateTimeObject, JdbcType jdbcType) throws SQLException {
+        Validate.notNull(dateTimeObject, "dateTimeObject is null");
+        DateTime dateTime = (DateTime) dateTimeObject;
+        if (jdbcType.equals(JdbcType.DATE)) {
+            preparedStatement.setDate(i, new java.sql.Date(dateTime.getMillis()));
+        }   else {
+            throw new UnsupportedOperationException("Unable to convert DateTime to " + jdbcType.toString());
+        }
+    }
 
-	@Override
-	public Object getResult(CallableStatement cs, int columnIndex) throws SQLException {
-		throw new UnsupportedOperationException("getResult(CallableStatement cs, int columnIndex)");
-	}
+    @Override
+    public DateTime getNullableResult(ResultSet rs, String columnName) throws SQLException {
+        Date date = rs.getDate(columnName);
+        return (date == null) ? null : new DateTime(date.getTime());
+    }
 
-	@Override
-	public void setParameter(PreparedStatement ps, int i, Object parameter, JdbcType jdbcType) throws SQLException {
-		throw new UnsupportedOperationException("setParameter(PreparedStatement ps, int i, Object parameter, JdbcType jdbcType)");
-	}
+    @Override
+    public DateTime getNullableResult(CallableStatement callableStatement, int i) throws SQLException {
+        Date date = callableStatement.getDate(i);
+        return (date == null) ? null : new DateTime(date.getTime());
+    }
 
 }

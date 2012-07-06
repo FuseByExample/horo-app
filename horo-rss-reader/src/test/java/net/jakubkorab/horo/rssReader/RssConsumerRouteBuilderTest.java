@@ -1,11 +1,5 @@
 package net.jakubkorab.horo.rssReader;
 
-import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.component.mock.MockEndpoint;
 import org.apache.camel.test.junit4.CamelTestSupport;
@@ -14,6 +8,8 @@ import org.apache.commons.lang.Validate;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.io.*;
 
 public class RssConsumerRouteBuilderTest extends CamelTestSupport {
 	private Logger log = LoggerFactory.getLogger(this.getClass());

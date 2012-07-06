@@ -3,7 +3,6 @@ package net.jakubkorab.horo.model;
 import org.joda.time.DateTime;
 
 public class Horoscope {
-
 	private Long id;
 	private DateTime predictsFor;
 	private StarSign starSign;
@@ -29,8 +28,8 @@ public class Horoscope {
 		return starSign;
 	}
 
-	public void setStarSign(String name) {
-		this.starSign = StarSign.getInstance(name);
+	public void setStarSign(StarSign starSign) {
+		this.starSign = starSign;
 	}
 
 	public String getEntry() {

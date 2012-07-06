@@ -13,4 +13,11 @@
         <typeAlias alias="Horoscope" type="net.jakubkorab.horo.model.Horoscope"/>
     </typeAliases>
 
+    <typeHandlers>
+        <typeHandler javaType="org.joda.time.DateTime"
+                     handler="net.jakubkorab.horo.db.typehandler.DateTimeTypeHandler"/>
+        <typeHandler javaType="net.jakubkorab.horo.model.StarSign"
+                     handler="net.jakubkorab.horo.db.typehandler.StarSignTypeHandler"/>
+    </typeHandlers>
+
 </configuration>

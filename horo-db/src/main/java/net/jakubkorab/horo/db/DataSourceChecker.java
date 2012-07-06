@@ -1,9 +1,10 @@
 package net.jakubkorab.horo.db;
 
-import javax.annotation.PostConstruct;
-import javax.sql.DataSource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import javax.annotation.PostConstruct;
+import javax.sql.DataSource;
 
 public class DataSourceChecker {
 	

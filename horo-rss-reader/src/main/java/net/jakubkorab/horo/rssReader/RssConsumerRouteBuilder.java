@@ -1,10 +1,10 @@
 package net.jakubkorab.horo.rssReader;
 
-import javax.annotation.PostConstruct;
-
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.commons.lang.StringEscapeUtils;
 import org.apache.commons.lang.Validate;
+
+import javax.annotation.PostConstruct;
 
 /**
  * Template {@link RouteBuilder} for routes that consume RSS feeds and persist these to the daabase. 

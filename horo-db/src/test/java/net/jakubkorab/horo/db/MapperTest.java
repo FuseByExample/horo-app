@@ -1,8 +1,6 @@
 package net.jakubkorab.horo.db;
 
-import static junit.framework.Assert.*;
 import net.jakubkorab.horo.model.Horoscope;
-import org.apache.commons.dbcp.BasicDataSource;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -10,19 +8,20 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
-import org.springframework.core.io.Resource;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import javax.sql.DataSource;
 import java.io.IOException;
 import java.util.List;
-import javax.sql.DataSource;
+
+import static junit.framework.Assert.*;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration({"/spring-context-test.xml", "/META-INF/spring/spring-context.xml"})
 public class MapperTest {
+    // TODO convert to integration test
 
     private Logger log = LoggerFactory.getLogger(this.getClass());
 
@@ -50,7 +49,7 @@ public class MapperTest {
     }
 
     @Test
-    public void checkMappers() throws IOException {
+    public void checkMappers() {
         assertNotNull(sqlSessionTemplate);
         List<Horoscope> horoscopes = (List<Horoscope>) sqlSessionTemplate.selectList("selectAllHoroscopes");
         assertFalse(horoscopes.isEmpty());
