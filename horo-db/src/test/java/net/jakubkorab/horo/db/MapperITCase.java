@@ -20,9 +20,7 @@ import static junit.framework.Assert.*;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration({"/spring-context-test.xml", "/META-INF/spring/spring-context.xml"})
-public class MapperTest {
-    // TODO convert to integration test
-
+public class MapperITCase {
     private Logger log = LoggerFactory.getLogger(this.getClass());
 
     private SqlSessionTemplate sqlSessionTemplate;
@@ -57,7 +55,6 @@ public class MapperTest {
             log.info(horoscope.toString());
         }
     }
-
 
 }
 

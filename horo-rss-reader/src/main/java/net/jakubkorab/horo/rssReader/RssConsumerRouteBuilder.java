@@ -7,7 +7,7 @@ import org.apache.commons.lang.Validate;
 import javax.annotation.PostConstruct;
 
 /**
- * Template {@link RouteBuilder} for routes that consume RSS feeds and persist these to the daabase. 
+ * Template {@link RouteBuilder} for routes that consume RSS feeds and persist these to the database.
  * @author jkorab
  */
 public class RssConsumerRouteBuilder extends RouteBuilder {

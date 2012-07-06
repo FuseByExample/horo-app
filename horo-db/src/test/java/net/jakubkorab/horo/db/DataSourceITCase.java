@@ -14,7 +14,7 @@ import static org.junit.Assert.assertNotNull;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration({"/spring-context-test.xml", "/META-INF/spring/spring-context.xml"})
-public class DataSourceCheckerTest {
+public class DataSourceITCase {
 
 	@Autowired
 	private DataSource dataSource;

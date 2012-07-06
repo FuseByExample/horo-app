@@ -28,7 +28,7 @@ public class RssConsumerRouteBuilderTest extends CamelTestSupport {
 		MockEndpoint mock = getMockEndpoint("mock:out");
 		mock.setExpectedMessageCount(12);
 
-		String body = loadFileAsString("src/test/resources/com/astrology/2012-06-25.xml");
+		String body = loadFileAsString("/com/astrology/2012-06-25.xml");
 		template.sendBody("direct:in", body);
 
 		mock.setResultWaitTime(1000);
@@ -42,7 +42,7 @@ public class RssConsumerRouteBuilderTest extends CamelTestSupport {
 		MockEndpoint mock = getMockEndpoint("mock:out");
 		mock.setExpectedMessageCount(12);
 
-		String body = loadFileAsString("src/test/resources/com/astrology/extended/2012-06-25.xml");
+		String body = loadFileAsString("/com/astrology/extended/2012-06-25.xml");
 		template.sendBody("direct:in", body);
 
 		mock.setResultWaitTime(1000);
@@ -52,15 +52,12 @@ public class RssConsumerRouteBuilderTest extends CamelTestSupport {
 	}
 
 	private String loadFileAsString(String fileName) throws IOException {
-		Validate.notEmpty(fileName);
-		FileInputStream in = null;
-		try {
-			in = new FileInputStream(fileName);
-		} catch (FileNotFoundException e) {
-			throw new RuntimeException("Could not find " + fileName, e);
-		}
+        InputStream inputStream = getClass().getResourceAsStream(fileName);
+        if (inputStream == null) {
+            throw new RuntimeException("Could not find " + fileName);
+        }
 		BufferedReader bufferedReader = new BufferedReader(
-				new InputStreamReader(in));
+				new InputStreamReader(inputStream));
 		StringBuilder out = new StringBuilder();
 		while (true) {
 			String line = bufferedReader.readLine();
