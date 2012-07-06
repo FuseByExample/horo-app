@@ -9,7 +9,17 @@ public class Horoscope {
 	private String entry;
     private Feed feed;
 
-	public Long getId() {
+    @Override
+    public String toString() {
+        return "Horoscope{" +
+                "id=" + id +
+                ", predictsFor=" + predictsFor +
+                ", starSign=" + starSign +
+                ", entry='" + entry + '\'' +
+                '}';
+    }
+
+    public Long getId() {
 		return id;
 	}
 

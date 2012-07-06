@@ -8,7 +8,18 @@
     <camelContext id="bookings" xmlns="http://camel.apache.org/schema/spring">
         <propertyPlaceholder id="properties" location="ref:osgi.properties"/>
 
+        <dataFormats>
+            <json id="json"/>
+        </dataFormats>
+
+        <route id="showHoroscopes">
+            <from uri="jetty://http://localhost:12345/horoscopes"/>
+            <pollEnrich uri="mybatis:horoscope.selectAll"/>
+            <marshal ref="json"/>
+        </route>
+        <!--
         <routeBuilder ref="rssReaderComAstrology" />
+        -->
     </camelContext>
 
     <bean id="rssReaderComAstrology" class="net.jakubkorab.horo.rssReader.RssConsumerRouteBuilder">

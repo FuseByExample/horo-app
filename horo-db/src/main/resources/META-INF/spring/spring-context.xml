@@ -24,4 +24,8 @@
         <property name="mapperLocations" value="classpath*:META-INF/mappers/**/*.xml" />
     </bean>
 
+    <bean id="mybatis" class="org.apache.camel.component.mybatis.MyBatisComponent">
+        <property name="sqlSessionFactory" ref="sqlSessionFactory" />
+    </bean>
+
 </beans>

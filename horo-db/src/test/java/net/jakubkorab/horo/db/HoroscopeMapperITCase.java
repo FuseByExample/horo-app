@@ -11,7 +11,6 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -27,25 +26,10 @@ public class HoroscopeMapperITCase {
     private Logger log = LoggerFactory.getLogger(this.getClass());
 
     private SqlSessionTemplate sqlSessionTemplate;
-    private JdbcTemplate jdbcTemplate;
 
     @Autowired
     public void setSqlSessionFactory(SqlSessionFactory sqlSessionFactory) {
         this.sqlSessionTemplate = new SqlSessionTemplate(sqlSessionFactory);
-    }
-
-    @Autowired
-    public void setDataSource(DataSource dataSource) {
-        this.jdbcTemplate = new JdbcTemplate(dataSource);
-    }
-
-    /**
-     * This test is just here to check that the database user can connect successfully, without
-     * mybatis getting in the way.
-     */
-    @Test
-    public void checkPermissions() throws IOException {
-        assertTrue(jdbcTemplate.queryForLong("select count(*) from horoscopes") > 0);
     }
 
     @Test
@@ -80,6 +64,7 @@ public class HoroscopeMapperITCase {
         } finally {
             // clean up
             sqlSessionTemplate.delete("horoscope.delete", horoscope);
+            assertEquals((Integer) 0, getInstanceCount(horoscope));
         }
     }
 

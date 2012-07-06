@@ -10,15 +10,17 @@
     http://www.springframework.org/schema/osgi http://www.springframework.org/schema/osgi/spring-osgi.xsd
     http://www.springframework.org/schema/osgi-compendium http://www.springframework.org/schema/osgi-compendium/spring-osgi-compendium.xsd">
 
-  <osgix:cm-properties id="osgi.properties" persistent-id="net.jakubkorab.horo.rss-reader">
-    <prop key="jdbc.driverClassName">org.postgresql.Driver</prop>
-    <prop key="jdbc.url">jdbc:postgresql://localhost:5432/horo-db</prop>
-    <prop key="jdbc.username">horo-app</prop>
-    <prop key="jdbc.password">horo-passwd</prop>
-  </osgix:cm-properties>
+    <osgix:cm-properties id="osgi.properties" persistent-id="net.jakubkorab.horo.rss-reader">
+        <prop key="jdbc.driverClassName">org.postgresql.Driver</prop>
+        <prop key="jdbc.url">jdbc:postgresql://localhost:5432/horo-db</prop>
+        <prop key="jdbc.username">horo-app</prop>
+        <prop key="jdbc.password">horo-passwd</prop>
+    </osgix:cm-properties>
 
-  <ctx:property-placeholder properties-ref="osgi.properties" />
+    <ctx:property-placeholder properties-ref="osgi.properties"/>
 
-  <osgi:reference id="dataSource" interface="javax.sql.DataSource" filter="(database='horo-app')"/>
+    <osgi:reference id="dataSource" interface="javax.sql.DataSource" filter="(database='horo-app')"/>
+    <osgi:reference id="mybatis" interface="org.apache.camel.Component"
+                    filter="(&amp;(component='mybatis')(database='horo-app'))"/>
 
 </beans>
