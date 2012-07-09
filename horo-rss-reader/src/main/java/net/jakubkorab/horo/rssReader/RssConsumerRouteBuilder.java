@@ -1,7 +1,6 @@
 package net.jakubkorab.horo.rssReader;
 
 import org.apache.camel.builder.RouteBuilder;
-import org.apache.commons.lang.StringEscapeUtils;
 import org.apache.commons.lang.Validate;
 
 import javax.annotation.PostConstruct;
@@ -41,15 +40,18 @@ public class RssConsumerRouteBuilder extends RouteBuilder {
 	@Override
 	public void configure() throws Exception {
 		from(sourceUri).id("rssConsumer-" + sourceName)
-			.split(xpath("/rss/channel/item"))
-			.setHeader("pubdate", xpath("/item/pubdate"))
-			.transform(xpath("/item/description"))
-			.transform(bean(StringEscapeUtils.class, "unescapeHtml"))
+			.split(simple("${body.entries}"))
+            .setHeader("feedName", constant(sourceName))
+            .setHeader("title", simple("${body.title}"))
+            .setHeader("sign", bean(StarSignParser.class, "parse"))
+			.setHeader("date", simple("${body.publishedDate}"))
+			.transform(simple("${body.description.value}"))
+            .convertBodyTo(String.class)
 			.unmarshal().tidyMarkup()
-			// get the first paragraph
+             // get the first paragraph
 			.transform(xpath("//p[1]/text()").stringResult())
-			.to("log:items")
-			// save to db
+            .bean(HoroscopeBuilder.class)
+			.to("log:items?showHeaders=true")
 			.to(targetUri);
 	}
 
