@@ -14,7 +14,7 @@
 
         <route id="showHoroscopes">
             <from uri="jetty://http://localhost:12345/horoscopes"/>
-            <pollEnrich uri="mybatis:horoscope.selectAll"/>
+            <to uri="mybatis:selectAll?statementType=SelectList"/>
             <marshal ref="json"/>
         </route>
         <!--
