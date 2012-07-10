@@ -16,22 +16,26 @@ import java.util.Map;
  * Note: this class only works on JDKs that contain {@link com.sun.net.httpserver.HttpServer}
  */
 public class HttpServerInterceptor extends ExternalResource {
-    private Logger log = LoggerFactory.getLogger(this.getClass());
-    private HttpServer httpServer;
+    private final Logger log = LoggerFactory.getLogger(this.getClass());
+    private final HttpServer httpServer;
     private final int port;
-    private Class testClass;
-    private Map<String, HttpHandler> pathHandlers = new HashMap<String, HttpHandler>();
+    private final Class testClass;
+    private final Map<String, HttpHandler> pathHandlers = new HashMap<String, HttpHandler>();
 
     public HttpServerInterceptor(Class testClass, int port) {
         Validate.notNull(testClass, "testClass is null");
-        Validate.isTrue(port > 0, "port must be greater than 0");
+        //Validate.isTrue(port > 0, "port must be greater than 0");
         this.testClass = testClass;
-        this.port = port;
+        try {
+            httpServer = HttpServer.create(new InetSocketAddress(port), 0);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        this.port = httpServer.getAddress().getPort();
     }
 
     @Override
     public void before() throws IOException {
-        httpServer = HttpServer.create(new InetSocketAddress(port), 0);
         log.info("Starting HttpServer");
         for (Map.Entry<String, HttpHandler> entry : pathHandlers.entrySet()) {
             httpServer.createContext(entry.getKey(), entry.getValue());
@@ -50,5 +54,9 @@ public class HttpServerInterceptor extends ExternalResource {
         Validate.notNull(handlerResource, "handlerResource is null");
         pathHandlers.put(contextPath, new ResourceHttpHandler(testClass, handlerResource));
         return this;
+    }
+
+    public int getPort() {
+        return port;
     }
 }

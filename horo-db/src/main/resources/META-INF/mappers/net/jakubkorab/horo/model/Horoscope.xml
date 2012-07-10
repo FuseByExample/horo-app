@@ -18,23 +18,23 @@
     </resultMap>
 
     <select id="selectAll" resultMap="HoroscopeResult">
-        select h.horoscope_id, s.name, h.predicts_for, h.entry 
-            from horoscopes h
-            inner join signs s on (h.sign_id = s.sign_id)
+        select h.horoscope_id, s.name, h.predicts_for, h.entry
+        from horoscopes h
+        inner join signs s on (h.sign_id = s.sign_id)
     </select>
 
     <!-- Insert example, using the Account parameter class -->
     <insert id="insert" parameterType="Horoscope">
         insert into horoscopes (
-            sign_id,
-            feed_id,
-            predicts_for,
-            entry
+        sign_id,
+        feed_id,
+        predicts_for,
+        entry
         )
-        select s.sign_id, f.feed_id, #{predictsFor}, #{entry} 
-            from signs s, feeds f
-            where s.name = #{starSign.name}
-                and f.name = #{feed.name}
+        select s.sign_id, f.feed_id, #{predictsFor}, #{entry}
+        from signs s, feeds f
+        where s.name = #{starSign.name}
+        and f.name = #{feed.name}
     </insert>
 
     <sql id="withHoroscope">
@@ -42,19 +42,20 @@
         inner join signs s on (h.sign_id = s.sign_id)
         inner join feeds f on (h.feed_id = f.feed_id)
         where h.predicts_for = #{predictsFor}
-            and s.name = #{starSign.name}
-            and f.name = #{feed.name}
+        and s.name = #{starSign.name}
+        and f.name = #{feed.name}
     </sql>
 
     <select id="count" resultType="int" parameterType="Horoscope">
-        select count(*) <include refid="withHoroscope"/>
+        select count(*)
+        <include refid="withHoroscope"/>
     </select>
 
     <delete id="delete" parameterType="Horoscope">
         delete from horoscopes
-            where (predicts_for, sign_id, feed_id) in (
-                select h.predicts_for, s.sign_id, f.feed_id
-                <include refid="withHoroscope"/>
+        where horoscope_id in (
+        select h.horoscope_id
+        <include refid="withHoroscope"/>
         )
     </delete>
 

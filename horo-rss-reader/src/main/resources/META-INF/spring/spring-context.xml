@@ -5,8 +5,10 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
         http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd">
 
-    <camelContext id="bookings" xmlns="http://camel.apache.org/schema/spring">
+    <camelContext id="horo-rss-reader" xmlns="http://camel.apache.org/schema/spring">
         <propertyPlaceholder id="properties" location="ref:osgi.properties"/>
+
+        <routeBuilder ref="rssReaderComAstrology"/>
 
         <dataFormats>
             <json id="json"/>
@@ -14,17 +16,15 @@
 
         <route id="showHoroscopes">
             <from uri="jetty://http://localhost:12345/horoscopes"/>
-            <to uri="mybatis:selectAll?statementType=SelectList"/>
+            <to uri="mybatis:horoscope.selectAll?statementType=SelectList"/>
             <marshal ref="json"/>
         </route>
-        <!--
-        <routeBuilder ref="rssReaderComAstrology" />
-        -->
     </camelContext>
 
     <bean id="rssReaderComAstrology" class="net.jakubkorab.horo.rssReader.RssConsumerRouteBuilder">
         <property name="sourceName" value="com.astronomy"/>
-        <property name="sourceUri" value="rss://http://www.astrology.com/horoscopes/daily-horoscope.rss"/>
-        <property name="targetUri" value="mybatis:foo"/>
+        <property name="sourceUri"
+                  value="rss://http://www.astrology.com/horoscopes/daily-horoscope.rss?splitEntries=false"/>
+        <property name="targetUri" value="mybatis:horoscope.insert?statementType=Insert"/>
     </bean>
 </beans>

@@ -12,29 +12,33 @@ import java.io.IOException;
 
 public class RssConsumerRouteBuilderITCase extends CamelTestSupport {
     public static final String CONTEXT_PATH = "/com-astrology-horoscope.rss";
+    public static final String RSS_COMPONENT_OPTIONS = "splitEntries=false";
     public static final int PORT = 8000;
 
     private Logger log = LoggerFactory.getLogger(this.getClass());
 
     @Rule
-    public HttpServerInterceptor httpServer = new HttpServerInterceptor(this.getClass(), PORT)
+    public HttpServerInterceptor httpServer = new HttpServerInterceptor(this.getClass(), 0)
             .respondsTo(CONTEXT_PATH, "/com/astrology/2012-06-25.xml");
 
     @Override
     protected RouteBuilder createRouteBuilder() throws Exception {
         RssConsumerRouteBuilder builder = new RssConsumerRouteBuilder();
         builder.setSourceName("com.astrology");
-        builder.setSourceUri("rss://http://localhost:" + PORT + CONTEXT_PATH);
+        builder.setSourceUri("rss://http://localhost:" + httpServer.getPort() + CONTEXT_PATH
+                + "?" + RSS_COMPONENT_OPTIONS);
         builder.setTargetUri("mock:out");
         return builder;
     }
 
     @Test
     public void testAstrologyComSimple() throws InterruptedException, IOException {
+        // log.info("httpServer running on port {}", httpServer.getPort());
+
         MockEndpoint mock = getMockEndpoint("mock:out");
         mock.setExpectedMessageCount(12);
 
-        mock.setResultWaitTime(2000);
+        mock.setResultWaitTime(5000);
         mock.assertIsSatisfied();
         log.info(mock.getReceivedExchanges().get(0).getIn().getBody()
                 .toString());
