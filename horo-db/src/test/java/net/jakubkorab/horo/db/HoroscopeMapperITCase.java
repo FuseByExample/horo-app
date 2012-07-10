@@ -21,7 +21,7 @@ import java.util.List;
 import static junit.framework.Assert.*;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration({"/spring-context-test.xml", "/META-INF/spring/spring-context.xml"})
+@ContextConfiguration({"/spring-context-test.xml", "/spring-context-db-test.xml", "/META-INF/spring/spring-context.xml"})
 public class HoroscopeMapperITCase {
     private Logger log = LoggerFactory.getLogger(this.getClass());
 

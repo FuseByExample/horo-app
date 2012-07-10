@@ -16,7 +16,7 @@ import static junit.framework.Assert.assertTrue;
 import static org.junit.Assert.assertNotNull;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration({"/spring-context-test.xml", "/META-INF/spring/spring-context.xml"})
+@ContextConfiguration({"/spring-context-test.xml", "/spring-context-db-test.xml", "/META-INF/spring/spring-context.xml"})
 public class DataSourceITCase {
 
     private JdbcTemplate jdbcTemplate;
