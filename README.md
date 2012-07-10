@@ -26,11 +26,12 @@ An open mind.
 TODO
 ====
 Basics
-* Table insert
-* Testing against an embedded database
-* Migrations - http://www.mybatis.org/migrations/
-* Write out starsign scrubbing login.
-* Restful web service endpoints
+* table insert not happening due to Postgres datasource commit
+* avoid duplicate inserts http://camel.apache.org/idempotent-consumer.html
+* dependency on debuggable Camel version? internally the camel bundles depend on minor versioned components only
+* migrations - http://www.mybatis.org/migrations/
+* write out starsign scrubbing code.
+* restful web service endpoints
 
 Scrapers
 * horoscopes.co.uk - scraping
