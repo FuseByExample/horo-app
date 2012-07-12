@@ -7,6 +7,7 @@ import org.apache.camel.Body;
 import org.apache.camel.Header;
 import org.apache.commons.lang.Validate;
 import org.joda.time.DateTime;
+import org.joda.time.DateTimeZone;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
 
@@ -37,8 +38,7 @@ public class HoroscopeBuilder {
         horoscope.setEntry(entry);
 
         SimpleDateFormat format = new SimpleDateFormat("EEE MMM dd HH:mm:ss z yyyy");
-        // TODO applies timezone offset
-        DateTime dateTime = new DateTime(format.parse(date)).toDateMidnight().toDateTime();
+        DateTime dateTime = new DateTime(format.parse(date)).toDateTime(DateTimeZone.UTC).toDateMidnight().toDateTime();
         horoscope.setPredictsFor(dateTime);
         return horoscope;
     }

@@ -7,7 +7,11 @@
 
     <ctx:annotation-config/>
 
-    <bean class="net.jakubkorab.horo.db.DataSourceChecker">
+    <bean id="dataSourceChecker" class="net.jakubkorab.horo.db.DataSourceChecker">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="dataSource"/>
     </bean>
 
@@ -15,9 +19,14 @@
         <property name="dataSource" ref="dataSource"/>
         <property name="configLocation" value="/META-INF/SqlMapConfig.xml"/>
         <property name="mapperLocations" value="classpath*:META-INF/mappers/**/*.xml"/>
+        <property name="configurationProperties">
+            <props>
+                <prop key="c3p0.autoCommitOnClose">false</prop>
+            </props>
+        </property>
     </bean>
 
-    <bean id="mybatis" class="org.apache.camel.component.mybatis.MyBatisComponent">
+    <bean id="mybatis" class="org.apache.camel.component.mybatis.MyBatisComponent" depends-on="dataSourceChecker">
         <property name="sqlSessionFactory" ref="sqlSessionFactory"/>
     </bean>
 

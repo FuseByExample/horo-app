@@ -13,12 +13,11 @@ import java.io.IOException;
 public class RssConsumerRouteBuilderITCase extends CamelTestSupport {
     public static final String CONTEXT_PATH = "/com-astrology-horoscope.rss";
     public static final String RSS_COMPONENT_OPTIONS = "splitEntries=false";
-    public static final int PORT = 8000;
 
     private Logger log = LoggerFactory.getLogger(this.getClass());
 
     @Rule
-    public HttpServerInterceptor httpServer = new HttpServerInterceptor(this.getClass(), 0)
+    public HttpServerInterceptor httpServer = new HttpServerInterceptor(this.getClass())
             .respondsTo(CONTEXT_PATH, "/com/astrology/2012-06-25.xml");
 
     @Override

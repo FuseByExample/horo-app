@@ -23,21 +23,22 @@ Prerequisites
 =============
 An open mind.
 
-TODO
-====
+Outstanding work
 Basics
-* table insert not happening due to Postgres datasource commit
-* avoid duplicate inserts http://camel.apache.org/idempotent-consumer.html
-* dependency on debuggable Camel version? internally the camel bundles depend on minor versioned components only
-* migrations - http://www.mybatis.org/migrations/
-* write out starsign scrubbing code.
-* restful web service endpoints
+* FIXME table insert not happening due to Postgres datasource commit
+** org.postgresql.util.PSQLException: Cannot commit when autoCommit is enabled.
+* TODO add jasypt encryption to db credentials
+* TODO remove need for enforcer to run every time
+* TODO avoid duplicate inserts http://camel.apache.org/idempotent-consumer.html
+* TODO dependency on debuggable Camel version? internally the camel bundles depend on minor versioned components only
+* TODO migrations - http://www.mybatis.org/migrations/
+* TODO write out starsign scrubbing code.
+* TODO restful web service endpoints
 
 Scrapers
-* horoscopes.co.uk - scraping
-* horoscope.com - scraping, 1st <div id="textline">
-
+* TODO horoscopes.co.uk - scraping
+* TODO horoscope.com - scraping, 1st <div id="textline">
 ** http://www.mirror.co.uk/lifestyle/horoscopes/daily/aries/
 ** div[class="horoscopes-intro"]/h2/Today's Horoscope/p/Make a special point of occupying yourself with tasks you find easy to do. Focus on jobs that will not need a lot of concentration or specialist knowledge. Complicated ventures will only have you running around in circles. These are best left alone until you feel more able to handle the challenge.
 
-* Error handling for odd scrapers.
+* TODO Error handling for odd scrapers.

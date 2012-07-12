@@ -45,7 +45,7 @@ public class RssConsumerRouteBuilder extends RouteBuilder {
       */
     @Override
     public void configure() throws Exception {
-        from(sourceUri).id("rssConsumer-" + sourceName)
+        from(sourceUri).id("rssConsumer-" + sourceName).transacted()
                 .removeHeader("CamelRssFeed") // redundant header that slows down processing
                 .split(simple("${body.entries}"))
                 .setHeader("feedName", constant(sourceName))

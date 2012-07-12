@@ -9,19 +9,25 @@ import javax.annotation.PostConstruct;
 import javax.sql.DataSource;
 
 public class DataSourceChecker {
-	
-	private Logger log = LoggerFactory.getLogger(this.getClass());
-	private JdbcTemplate jdbcTemplate;
 
-	public void setDataSource(DataSource dataSource) {
+    private Logger log = LoggerFactory.getLogger(this.getClass());
+    private JdbcTemplate jdbcTemplate;
+    private String status = "Unavailable";
+
+    public void setDataSource(DataSource dataSource) {
         Validate.notNull(dataSource, "dataSource is null");
-		jdbcTemplate = new JdbcTemplate(dataSource);
-	}
+        jdbcTemplate = new JdbcTemplate(dataSource);
+    }
 
-	@PostConstruct
-	public void check() {
+    @PostConstruct
+    public void check() {
         Validate.notNull(jdbcTemplate, "jdbcTemplate is null");
         Validate.isTrue(jdbcTemplate.queryForInt("select 1") == 1, "unable to run check statement");
         log.info("DataSource looks OK");
-	}
+        status = "Available";
+    }
+
+    public String getStatus() {
+        return status;
+    }
 }

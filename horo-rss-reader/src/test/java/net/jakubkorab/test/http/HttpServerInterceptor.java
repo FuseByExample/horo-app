@@ -18,20 +18,17 @@ import java.util.Map;
 public class HttpServerInterceptor extends ExternalResource {
     private final Logger log = LoggerFactory.getLogger(this.getClass());
     private final HttpServer httpServer;
-    private final int port;
     private final Class testClass;
     private final Map<String, HttpHandler> pathHandlers = new HashMap<String, HttpHandler>();
 
-    public HttpServerInterceptor(Class testClass, int port) {
+    public HttpServerInterceptor(Class testClass) {
         Validate.notNull(testClass, "testClass is null");
-        //Validate.isTrue(port > 0, "port must be greater than 0");
         this.testClass = testClass;
         try {
-            httpServer = HttpServer.create(new InetSocketAddress(port), 0);
+            httpServer = HttpServer.create(new InetSocketAddress(0), 0); // automatically assigns a free port
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        this.port = httpServer.getAddress().getPort();
     }
 
     @Override
@@ -57,6 +54,6 @@ public class HttpServerInterceptor extends ExternalResource {
     }
 
     public int getPort() {
-        return port;
+        return httpServer.getAddress().getPort();
     }
 }

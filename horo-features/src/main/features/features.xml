@@ -11,7 +11,10 @@
         <feature version="1.0-SNAPSHOT">horo-model</feature>
         <feature version="${camel-version}">camel-mybatis</feature>
         <bundle>wrap:mvn:postgresql/postgresql/${postgresql-version}</bundle>
+        <!--
         <bundle>wrap:mvn:commons-dbcp/commons-dbcp/${commons-dbcp-version}</bundle>
+        -->
+        <bundle>wrap:mvn:c3p0/c3p0/${c3p0-version}</bundle>
         <bundle>mvn:net.jakubkorab/horo-db/1.0-SNAPSHOT</bundle>
         <bundle>mvn:org.mybatis/mybatis/${mybatis-version}</bundle>
         <bundle>mvn:org.mybatis/mybatis-spring/${mybatis-spring-version}</bundle>
