@@ -14,16 +14,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import javax.sql.DataSource;
-import java.io.IOException;
 import java.util.List;
 
 import static junit.framework.Assert.*;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration({"/spring-context-test.xml",
-        "/spring-context-db-test.xml",
-        "/META-INF/spring/spring-context.xml"})
+@ContextConfiguration({"/test-context-props.xml",
+        "/test-context-h2.xml",
+        "/META-INF/spring/spring-context-mybatis.xml"})
 public class HoroscopeMapperITCase {
     private Logger log = LoggerFactory.getLogger(this.getClass());
 
@@ -37,7 +35,7 @@ public class HoroscopeMapperITCase {
     @Test
     public void testSelectAllHoroscopes() {
         assertNotNull(sqlSessionTemplate);
-        List<Horoscope> horoscopes = (List<Horoscope>) sqlSessionTemplate.selectList("horoscope.selectAll");
+        List<Horoscope> horoscopes = sqlSessionTemplate.selectList("horoscope.selectAll");
         assertFalse(horoscopes.isEmpty());
         for (Horoscope horoscope : horoscopes) {
             log.info(horoscope.toString());

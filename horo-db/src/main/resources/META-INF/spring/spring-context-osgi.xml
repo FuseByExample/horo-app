@@ -26,9 +26,21 @@
         </osgi:service-properties>
     </osgi:service>
 
+    <osgi:service ref="sqlSessionFactory" interface="org.apache.ibatis.session.SqlSessionFactory">
+        <osgi:service-properties>
+            <entry key="database" value="horo-app"/>
+        </osgi:service-properties>
+    </osgi:service>
+
     <osgi:service ref="mybatis" interface="org.apache.camel.Component">
         <osgi:service-properties>
             <entry key="component" value="mybatis"/>
+            <entry key="database" value="horo-app"/>
+        </osgi:service-properties>
+    </osgi:service>
+
+    <osgi:service ref="txManager" interface="org.springframework.transaction.PlatformTransactionManager">
+        <osgi:service-properties>
             <entry key="database" value="horo-app"/>
         </osgi:service-properties>
     </osgi:service>

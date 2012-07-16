@@ -6,6 +6,7 @@ import com.sun.syndication.io.XmlReader;
 import net.jakubkorab.test.ResourceHelper;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.component.mock.MockEndpoint;
+import org.apache.camel.spring.spi.SpringTransactionPolicy;
 import org.apache.camel.test.junit4.CamelTestSupport;
 import org.junit.Test;
 import org.slf4j.Logger;
@@ -21,6 +22,9 @@ public class RssConsumerRouteBuilderTest extends CamelTestSupport {
         builder.setSourceName("com.astrology");
         builder.setSourceUri("direct:in");
         builder.setTargetUri("mock:out");
+
+        SpringTransactionPolicy transactionPolicy = new SpringTransactionPolicy();
+
         return builder;
     }
 

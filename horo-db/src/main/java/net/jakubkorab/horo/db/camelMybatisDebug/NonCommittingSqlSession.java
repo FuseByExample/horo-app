@@ -1,5 +1,6 @@
 package net.jakubkorab.horo.db.camelMybatisDebug;
 
+import org.apache.ibatis.executor.BatchResult;
 import org.apache.ibatis.session.Configuration;
 import org.apache.ibatis.session.ResultHandler;
 import org.apache.ibatis.session.RowBounds;
@@ -126,6 +127,11 @@ public class NonCommittingSqlSession implements SqlSession {
     @Override
     public void rollback(boolean b) {
         log.warn("rollback called - ignoring");
+    }
+
+    @Override
+    public List<BatchResult> flushStatements() {
+        return delegate.flushStatements();
     }
 
     @Override

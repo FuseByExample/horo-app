@@ -12,15 +12,14 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 @MappedTypes(StarSign.class)
-public class StarSignTypeHandler extends BaseTypeHandler {
+public class StarSignTypeHandler extends BaseTypeHandler<StarSign> {
 
     @Override
-    public void setNonNullParameter(PreparedStatement preparedStatement, int i, Object starSignObject, JdbcType jdbcType) throws SQLException {
-        Validate.notNull(starSignObject, "starSignObject is null");
-        StarSign starSign = (StarSign) starSignObject;
+    public void setNonNullParameter(PreparedStatement preparedStatement, int i, StarSign starSign, JdbcType jdbcType) throws SQLException {
+        Validate.notNull(starSign, "starSign is null");
         if ((jdbcType == null) || (jdbcType.equals(JdbcType.VARCHAR))) {
             preparedStatement.setString(i, starSign.getName());
-        }   else {
+        } else {
             throw new UnsupportedOperationException("Unable to convert StarSign to " + jdbcType.toString());
         }
     }
@@ -28,6 +27,12 @@ public class StarSignTypeHandler extends BaseTypeHandler {
     @Override
     public StarSign getNullableResult(ResultSet rs, String columnName) throws SQLException {
         String name = rs.getString(columnName);
+        return (name == null) ? null : StarSign.getInstance(name);
+    }
+
+    @Override
+    public StarSign getNullableResult(ResultSet rs, int column) throws SQLException {
+        String name = rs.getString(column);
         return (name == null) ? null : StarSign.getInstance(name);
     }
 

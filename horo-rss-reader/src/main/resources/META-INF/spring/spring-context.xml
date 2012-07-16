@@ -21,10 +21,16 @@
         </route>
     </camelContext>
 
+    <bean id="PROPAGATION_REQUIRED" class="org.apache.camel.spring.spi.SpringTransactionPolicy">
+        <property name="transactionManager" ref="txManager"/>
+        <property name="propagationBehaviorName" value="PROPAGATION_REQUIRED"/>
+    </bean>
+
     <bean id="rssReaderComAstrology" class="net.jakubkorab.horo.rssReader.RssConsumerRouteBuilder">
         <property name="sourceName" value="com.astronomy"/>
         <property name="sourceUri"
                   value="rss://http://www.astrology.com/horoscopes/daily-horoscope.rss?splitEntries=false"/>
         <property name="targetUri" value="mybatis:horoscope.insert?statementType=Insert"/>
     </bean>
+
 </beans>

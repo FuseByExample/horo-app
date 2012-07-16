@@ -27,6 +27,13 @@ Outstanding work
 Basics
 * FIXME table insert not happening due to Postgres datasource commit
 ** org.postgresql.util.PSQLException: Cannot commit when autoCommit is enabled.
+*** c3p0 sets autoCommitOnClose to false, or so it says
+*** happens regardless of whether there is a transaction manager defined or not
+** MyBatisProducer does a session.commit() followed by session.close()
+*** stubbed out session.commit and it's not committing at all - autoCommitOnClose=true?
+** SessionFactoryBean ->  c3p0 PooledDataSource -> PGSimpleDataSource
+** all interactions are with the SessionFactory, no mention of transaction managers
+*** see SessionFactoryBean for transaction setup
 * TODO add jasypt encryption to db credentials
 * TODO remove need for enforcer to run every time
 * TODO avoid duplicate inserts http://camel.apache.org/idempotent-consumer.html

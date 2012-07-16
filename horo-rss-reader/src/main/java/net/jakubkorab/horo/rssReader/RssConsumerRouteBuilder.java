@@ -1,12 +1,10 @@
 package net.jakubkorab.horo.rssReader;
 
-import com.sun.syndication.feed.synd.SyndFeed;
-import org.apache.camel.Exchange;
-import org.apache.camel.Processor;
 import org.apache.camel.builder.RouteBuilder;
+import org.apache.camel.model.ProcessorDefinition;
+import org.apache.camel.model.RouteDefinition;
+import org.apache.camel.spi.TransactedPolicy;
 import org.apache.commons.lang.Validate;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import javax.annotation.PostConstruct;
 
@@ -21,6 +19,8 @@ public class RssConsumerRouteBuilder extends RouteBuilder {
     private String sourceUri;
     private String targetUri;
 
+    private TransactedPolicy transactedPolicy;
+
     public void setSourceName(String sourceName) {
         this.sourceName = sourceName;
     }
@@ -31,6 +31,12 @@ public class RssConsumerRouteBuilder extends RouteBuilder {
 
     public void setTargetUri(String targetUri) {
         this.targetUri = targetUri;
+    }
+
+    public void setTransactedPolicy(TransactedPolicy transactedPolicy) {
+        Validate.notNull(transactedPolicy, "transactedPolicy is null");
+
+        this.transactedPolicy = transactedPolicy;
     }
 
     @PostConstruct
@@ -45,8 +51,14 @@ public class RssConsumerRouteBuilder extends RouteBuilder {
       */
     @Override
     public void configure() throws Exception {
-        from(sourceUri).id("rssConsumer-" + sourceName).transacted()
-                .removeHeader("CamelRssFeed") // redundant header that slows down processing
+        ProcessorDefinition definition = from(sourceUri).id("rssConsumer-" + sourceName);
+
+        if (transactedPolicy != null) {
+            // none defined during unit test
+            definition = definition.policy(transactedPolicy);
+        }
+
+        definition.removeHeader("CamelRssFeed") // redundant header that slows down processing
                 .split(simple("${body.entries}"))
                 .setHeader("feedName", constant(sourceName))
                 .setHeader("title", simple("${body.title}"))

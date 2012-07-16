@@ -9,14 +9,12 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import javax.sql.DataSource;
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.SQLException;
 
 import static junit.framework.Assert.assertTrue;
 import static org.junit.Assert.assertNotNull;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration({"/spring-context-test.xml", "/spring-context-db-test.xml", "/META-INF/spring/spring-context.xml"})
+@ContextConfiguration({"/test-context-props.xml", "/test-context-h2.xml", "/META-INF/spring/spring-context-mybatis.xml"})
 public class DataSourceITCase {
 
     private JdbcTemplate jdbcTemplate;

@@ -16,7 +16,15 @@
 
     <ctx:property-placeholder properties-ref="osgi.properties"/>
 
+    <!--
     <osgi:reference id="mybatis" interface="org.apache.camel.Component"
                     filter="(&amp;(component=mybatis)(database=horo-app))"/>
+    -->
 
+    <osgi:reference id="txManager"
+                    interface="org.springframework.transaction.PlatformTransactionManager"
+                    filter="(database=horo-app)"/>
+
+    <osgi:reference id="sqlSessionFactory" interface="org.apache.ibatis.session.SqlSessionFactory"
+                    filter="(database=horo-app)"/>
 </beans>

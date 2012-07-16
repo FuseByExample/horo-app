@@ -16,17 +16,16 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import javax.sql.DataSource;
-import java.io.IOException;
 
 /**
  * @author jakub
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration({"/spring-context-test.xml",
-        "/spring-context-db-postgres-test.xml",
-        "/META-INF/spring/spring-context.xml",
-        "insert-route-context.xml"})
-public class MyBatisComponentITCase {
+@ContextConfiguration({"/test-context-props.xml",
+        "/test-context-postgres.xml",
+        "/META-INF/spring/spring-context-mybatis.xml",
+        "InsertRouteITCase-context.xml"})
+public class InsertRouteITCase {
 
     private JdbcTemplate jdbcTemplate;
     private ProducerTemplate producerTemplate;
@@ -73,7 +72,7 @@ public class MyBatisComponentITCase {
     }
 
     private void deleteHoroscope(Horoscope horoscope) {
-        // jdbcTemplate.update("delete from horoscopes where entry = ?", horoscope.getEntry());
+        jdbcTemplate.update("delete from horoscopes where entry = ?", horoscope.getEntry());
     }
 
     private int getHoroscopeCount() {
