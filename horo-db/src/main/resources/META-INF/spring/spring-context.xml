@@ -11,19 +11,20 @@
         <property name="dataSource" ref="dataSource"/>
     </bean>
 
+    <!--
     <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="dataSource"/>
     </bean>
+    -->
 
-    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+    <bean id="sqlSessionFactoryBean" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
         <property name="configLocation" value="/META-INF/SqlMapConfig.xml"/>
         <property name="mapperLocations" value="classpath*:META-INF/mappers/**/*.xml"/>
-        <property name="configurationProperties">
-            <props>
-                <prop key="c3p0.autoCommitOnClose">false</prop>
-            </props>
-        </property>
+    </bean>
+
+    <bean id="sqlSessionFactory" class="net.jakubkorab.horo.db.camelMybatisDebug.NonCommittingSqlSessionFactory">
+        <constructor-arg ref="sqlSessionFactoryBean"/>
     </bean>
 
     <bean id="mybatis" class="org.apache.camel.component.mybatis.MyBatisComponent" depends-on="dataSourceChecker">
