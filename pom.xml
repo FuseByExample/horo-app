@@ -31,7 +31,7 @@
         <mybatis-spring-version>1.1.1</mybatis-spring-version>
         <!-- needs to match above; see http://www.mybatis.org/spring/ -->
         <spring-version>3.0.5.RELEASE</spring-version>
-        <!-- required to install mybatis-spring into smx -->
+        <spring-batch-version>2.1.8.RELEASE</spring-batch-version>
 
         <!-- db -->
         <postgresql-version>9.1-901.jdbc4</postgresql-version>
@@ -143,27 +143,6 @@
             </dependency>
 
             <dependency>
-                <groupId>org.apache.cxf</groupId>
-                <artifactId>cxf-rt-frontend-jaxws</artifactId>
-                <version>${cxf-version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.cxf</groupId>
-                <artifactId>cxf-rt-transports-http</artifactId>
-                <version>${cxf-version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.cxf</groupId>
-                <artifactId>cxf-rt-transports-http-jetty</artifactId>
-                <version>${cxf-version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.cxf</groupId>
-                <artifactId>cxf-rt-bindings-soap</artifactId>
-                <version>${cxf-version}</version>
-            </dependency>
-
-            <dependency>
                 <groupId>org.apache.ws.commons.axiom</groupId>
                 <artifactId>axiom-api</artifactId>
                 <version>${axiom-version}</version>
@@ -205,6 +184,39 @@
                 <artifactId>log4j</artifactId>
                 <version>${log4j-version}</version>
             </dependency>
+
+            <!-- testing import of mybatis-spring 1.1.1 -->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-core</artifactId>
+                <version>${spring-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-beans</artifactId>
+                <version>${spring-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>${spring-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-aop</artifactId>
+                <version>${spring-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-tx</artifactId>
+                <version>${spring-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-jdbc</artifactId>
+                <version>${spring-version}</version>
+            </dependency>
+            <!-- testing -->
 
             <dependency>
                 <groupId>org.springframework</groupId>

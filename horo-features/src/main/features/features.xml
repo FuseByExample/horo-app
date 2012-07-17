@@ -19,6 +19,8 @@
         <bundle>mvn:org.mybatis/mybatis/${mybatis-version}</bundle>
         <bundle>mvn:org.mybatis/mybatis-spring/${mybatis-spring-version}</bundle>
         <bundle>mvn:org.springframework/spring-jdbc/${spring-version}</bundle>
+        <!-- required by mybatis-spring -->
+        <bundle>mvn:org.springframework.batch/spring-batch-infrastructure/${spring-batch-version}</bundle>
     </feature>
 
     <feature name="horo-rss-reader" version="1.0-SNAPSHOT">
