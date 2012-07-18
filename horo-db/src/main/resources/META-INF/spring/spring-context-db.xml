@@ -20,9 +20,8 @@
         <constructor-arg ref="dataSource.pg"/>
     </bean>
 
-    <!-- TODO plug in pooled version -->
     <bean id="dataSource" class="org.springframework.jdbc.datasource.TransactionAwareDataSourceProxy">
-        <constructor-arg ref="dataSource.pg"/>
+        <constructor-arg ref="dataSource.pooled"/>
     </bean>
 
     <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">

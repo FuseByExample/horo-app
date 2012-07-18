@@ -18,14 +18,7 @@
         <property name="mapperLocations" value="classpath*:META-INF/mappers/**/*.xml"/>
     </bean>
 
-    <!--
-    TODO check whether this is still necessary for a non-pooled version
-    <bean id="sqlSessionFactory" class="net.jakubkorab.horo.db.camelMybatisDebug.NonCommittingSqlSessionFactory">
-        <constructor-arg ref="sqlSessionFactoryBean"/>
-    </bean>
-    -->
-
-    <bean id="mybatis" class="org.apache.camel.component.mybatis.MyBatisComponent" depends-on="dataSourceChecker">
+    <bean id="mybatis" class="org.apache.camel.component.mybatis.MyBatisComponent">
         <property name="sqlSessionFactory" ref="sqlSessionFactory"/>
     </bean>
 
