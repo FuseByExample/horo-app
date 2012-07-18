@@ -20,18 +20,6 @@
 
     <ctx:property-placeholder properties-ref="osgi.properties"/>
 
-    <osgi:service ref="dataSource" interface="javax.sql.DataSource">
-        <osgi:service-properties>
-            <entry key="database" value="horo-app"/>
-        </osgi:service-properties>
-    </osgi:service>
-
-    <osgi:service ref="sqlSessionFactory" interface="org.apache.ibatis.session.SqlSessionFactory">
-        <osgi:service-properties>
-            <entry key="database" value="horo-app"/>
-        </osgi:service-properties>
-    </osgi:service>
-
     <osgi:service ref="mybatis" interface="org.apache.camel.Component">
         <osgi:service-properties>
             <entry key="component" value="mybatis"/>

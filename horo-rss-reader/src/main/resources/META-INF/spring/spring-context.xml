@@ -9,6 +9,7 @@
         <propertyPlaceholder id="properties" location="ref:osgi.properties"/>
 
         <routeBuilder ref="rssReaderComAstrology"/>
+        <routeBuilder ref="rssReaderComAstrologyExtended"/>
 
         <dataFormats>
             <json id="json"/>
@@ -27,10 +28,19 @@
     </bean>
 
     <bean id="rssReaderComAstrology" class="net.jakubkorab.horo.rssReader.RssConsumerRouteBuilder">
-        <property name="sourceName" value="com.astronomy"/>
+        <property name="sourceName" value="com.astrology"/>
         <property name="sourceUri"
                   value="rss://http://www.astrology.com/horoscopes/daily-horoscope.rss?splitEntries=false"/>
         <property name="targetUri" value="mybatis:horoscope.insert?statementType=Insert"/>
+        <property name="transactedPolicyRef" value="PROPAGATION_REQUIRED"/>
+    </bean>
+
+    <bean id="rssReaderComAstrologyExtended" class="net.jakubkorab.horo.rssReader.RssConsumerRouteBuilder">
+        <property name="sourceName" value="com.astrology.extended"/>
+        <property name="sourceUri"
+                  value="rss://http://www.astrology.com/horoscopes/daily-extended.rss?splitEntries=false"/>
+        <property name="targetUri" value="mybatis:horoscope.insert?statementType=Insert"/>
+        <property name="transactedPolicyRef" value="PROPAGATION_REQUIRED"/>
     </bean>
 
 </beans>

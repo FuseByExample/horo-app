@@ -18,21 +18,16 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import javax.sql.DataSource;
 
 /**
- * @author jakub
+ * Camel route-based class to ensure that the mybatis component is wired correctly.
  */
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration({"/test-context-props.xml",
-        "/test-context-postgres.xml",
-        "/META-INF/spring/spring-context-mybatis.xml",
-        "InsertRouteITCase-context.xml"})
-public class InsertRouteITCase {
+public abstract class InsertRouteITBase {
 
-    private JdbcTemplate jdbcTemplate;
     private ProducerTemplate producerTemplate;
+    private HoroscopeUtils horoscopeUtils;
 
     @Autowired
     public void setDataSource(DataSource dataSource) {
-        this.jdbcTemplate = new JdbcTemplate(dataSource);
+        this.horoscopeUtils = new HoroscopeUtils(dataSource);
     }
 
     @Autowired
@@ -47,35 +42,18 @@ public class InsertRouteITCase {
      */
     @Test
     public void checkInsert() throws Exception {
-        Feed feed = new Feed();
-        feed.setName("com.astrology");
-
-        Horoscope horoscope = new Horoscope();
-        horoscope.setFeed(feed);
-        horoscope.setStarSign(StarSign.Aquarius);
-        horoscope.setPredictsFor(new DateMidnight(2001, 1, 1).toDateTime());
-        horoscope.setEntry("You will meet a tall, dark stranger");
+        Horoscope horoscope = SampleBuilder.getSampleHoroscope();
 
         assertNotNull(producerTemplate);
-
-        int initialCount = getHoroscopeCount();
-
+        int initialCount = horoscopeUtils.getHoroscopeCount();
         producerTemplate.sendBody("direct:insert", horoscope);
 
         Thread.sleep(1000);
-
         try {
-            assertTrue("horoscope not inserted", initialCount < getHoroscopeCount());
+            assertTrue("horoscope not inserted", initialCount < horoscopeUtils.getHoroscopeCount());
         } finally {
-            deleteHoroscope(horoscope);
+            horoscopeUtils.deleteHoroscope(horoscope);
         }
     }
 
-    private void deleteHoroscope(Horoscope horoscope) {
-        jdbcTemplate.update("delete from horoscopes where entry = ?", horoscope.getEntry());
-    }
-
-    private int getHoroscopeCount() {
-        return jdbcTemplate.queryForInt("select count(*) from horoscopes");
-    }
 }

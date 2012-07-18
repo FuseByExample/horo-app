@@ -36,7 +36,7 @@ public class RssConsumerRouteBuilderTest extends CamelTestSupport {
         SyndFeed body = getResourceAsSyndFeed("/com/astrology/2012-06-25.xml");
         template.sendBody("direct:in", body);
 
-        mock.setResultWaitTime(1000);
+        mock.setResultWaitTime(3000);
         mock.assertIsSatisfied();
         log.info(mock.getReceivedExchanges().get(0).getIn().getBody()
                 .toString());
@@ -50,7 +50,7 @@ public class RssConsumerRouteBuilderTest extends CamelTestSupport {
         SyndFeed body = getResourceAsSyndFeed("/com/astrology/extended/2012-06-25.xml");
         template.sendBody("direct:in", body);
 
-        mock.setResultWaitTime(1000);
+        mock.setResultWaitTime(3000);
         mock.assertIsSatisfied();
         log.info(mock.getReceivedExchanges().get(0).getIn().getBody()
                 .toString());

@@ -7,25 +7,23 @@
 
     <ctx:annotation-config/>
 
+    <!-- TODO check: this is here for more than informational purposes, using Postgres it initialises the connection pool -->
     <bean id="dataSourceChecker" class="net.jakubkorab.horo.db.DataSourceChecker">
         <property name="dataSource" ref="dataSource"/>
     </bean>
 
-    <!--
-    <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-        <property name="dataSource" ref="dataSource"/>
-    </bean>
-    -->
-
-    <bean id="sqlSessionFactoryBean" class="org.mybatis.spring.SqlSessionFactoryBean">
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
         <property name="configLocation" value="/META-INF/SqlMapConfig.xml"/>
         <property name="mapperLocations" value="classpath*:META-INF/mappers/**/*.xml"/>
     </bean>
 
+    <!--
+    TODO check whether this is still necessary for a non-pooled version
     <bean id="sqlSessionFactory" class="net.jakubkorab.horo.db.camelMybatisDebug.NonCommittingSqlSessionFactory">
         <constructor-arg ref="sqlSessionFactoryBean"/>
     </bean>
+    -->
 
     <bean id="mybatis" class="org.apache.camel.component.mybatis.MyBatisComponent" depends-on="dataSourceChecker">
         <property name="sqlSessionFactory" ref="sqlSessionFactory"/>

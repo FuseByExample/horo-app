@@ -8,7 +8,7 @@
     the connection pooling library will do a Class.forName(driverName), which doesn't play well in an OSGi environment.
     So we're just going to create a simple, driver-specific DataSource, and wrap it in a connection pool.
     -->
-    <bean id="pg.dataSource" class="org.postgresql.ds.PGSimpleDataSource">
+    <bean id="dataSource.pg" class="org.postgresql.ds.PGSimpleDataSource">
         <property name="serverName" value="${pg.server}"/>
         <property name="databaseName" value="${pg.database}"/>
         <property name="portNumber" value="${pg.port}"/>
@@ -16,13 +16,13 @@
         <property name="password" value="${pg.password}"/>
     </bean>
 
-    <bean id="dataSource" class="com.mchange.v2.c3p0.DataSources" factory-method="pooledDataSource">
-        <constructor-arg ref="pg.dataSource"/>
-        <constructor-arg>
-            <props>
-                <prop key="c3p0.autoCommitOnClose">true</prop>
-            </props>
-        </constructor-arg>
+    <bean id="dataSource.pooled" class="com.mchange.v2.c3p0.DataSources" factory-method="pooledDataSource">
+        <constructor-arg ref="dataSource.pg"/>
+    </bean>
+
+    <!-- TODO plug in pooled version -->
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.TransactionAwareDataSourceProxy">
+        <constructor-arg ref="dataSource.pg"/>
     </bean>
 
     <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">

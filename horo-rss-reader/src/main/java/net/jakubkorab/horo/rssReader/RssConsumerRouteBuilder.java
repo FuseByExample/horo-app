@@ -2,8 +2,6 @@ package net.jakubkorab.horo.rssReader;
 
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.model.ProcessorDefinition;
-import org.apache.camel.model.RouteDefinition;
-import org.apache.camel.spi.TransactedPolicy;
 import org.apache.commons.lang.Validate;
 
 import javax.annotation.PostConstruct;
@@ -19,7 +17,8 @@ public class RssConsumerRouteBuilder extends RouteBuilder {
     private String sourceUri;
     private String targetUri;
 
-    private TransactedPolicy transactedPolicy;
+    // TODO refactor back to TransactedPolicy
+    private String transactedPolicyRef;
 
     public void setSourceName(String sourceName) {
         this.sourceName = sourceName;
@@ -33,10 +32,10 @@ public class RssConsumerRouteBuilder extends RouteBuilder {
         this.targetUri = targetUri;
     }
 
-    public void setTransactedPolicy(TransactedPolicy transactedPolicy) {
-        Validate.notNull(transactedPolicy, "transactedPolicy is null");
+    public void setTransactedPolicyRef(String transactedPolicyRef) {
+        Validate.notEmpty(transactedPolicyRef, "transactedPolicyRef is empty");
 
-        this.transactedPolicy = transactedPolicy;
+        this.transactedPolicyRef = transactedPolicyRef;
     }
 
     @PostConstruct
@@ -51,16 +50,19 @@ public class RssConsumerRouteBuilder extends RouteBuilder {
       */
     @Override
     public void configure() throws Exception {
-        ProcessorDefinition definition = from(sourceUri).id("rssConsumer-" + sourceName);
+        String sedaUri = "seda:individual." + sourceName;
+        from(sourceUri).id("rssConsumer-" + sourceName)
+                .removeHeader("CamelRssFeed") // redundant header that slows down processing
+                .split(simple("${body.entries}"))
+                .to(sedaUri);
 
-        if (transactedPolicy != null) {
+        ProcessorDefinition definition = from(sedaUri).id(sedaUri);
+        if (transactedPolicyRef != null) {
             // none defined during unit test
-            definition = definition.policy(transactedPolicy);
+            definition = definition.transacted().ref(transactedPolicyRef);
         }
 
-        definition.removeHeader("CamelRssFeed") // redundant header that slows down processing
-                .split(simple("${body.entries}"))
-                .setHeader("feedName", constant(sourceName))
+        definition.setHeader("feedName", constant(sourceName))
                 .setHeader("title", simple("${body.title}"))
                 .setHeader("sign", bean(StarSignParser.class, "parse"))
                 .setHeader("date", simple("${body.publishedDate}"))

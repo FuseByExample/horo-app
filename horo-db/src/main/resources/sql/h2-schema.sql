@@ -1,10 +1,14 @@
-create table feeds ( 
+drop table if exists horoscopes;
+drop table if exists signs;
+drop table if exists feeds;
+
+create table feeds (
 	feed_id serial primary key, 
 	name varchar(64) not null, 
 	active boolean not null default true 
 );
 
-create table signs ( 
+create table signs (
 	sign_id serial primary key, 
 	name varchar(32) not null,
 	start_month int not null,
@@ -30,7 +34,7 @@ values ('Aries', 3, 19, 4, 19),
 	('Aquarius', 1, 20, 2, 18),
 	('Pisces', 2, 19, 3, 20);
 
-create table horoscopes ( 
+create table horoscopes (
 	horoscope_id serial primary key, 
 	feed_id integer not null, 
 	sign_id integer not null,

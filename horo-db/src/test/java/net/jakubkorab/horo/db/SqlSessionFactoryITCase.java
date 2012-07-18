@@ -18,11 +18,14 @@ import java.util.List;
 
 import static junit.framework.Assert.*;
 
+/**
+ * This test checks whether the mybatis-spring {@link SqlSessionFactory} is configured as expected.
+ */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration({"/test-context-props.xml",
         "/test-context-h2.xml",
         "/META-INF/spring/spring-context-mybatis.xml"})
-public class HoroscopeMapperITCase {
+public class SqlSessionFactoryITCase {
     private Logger log = LoggerFactory.getLogger(this.getClass());
 
     private SqlSessionTemplate sqlSessionTemplate;
@@ -36,6 +39,7 @@ public class HoroscopeMapperITCase {
     public void testSelectAllHoroscopes() {
         assertNotNull(sqlSessionTemplate);
         List<Horoscope> horoscopes = sqlSessionTemplate.selectList("horoscope.selectAll");
+        assertNotNull(horoscopes);
         assertFalse(horoscopes.isEmpty());
         for (Horoscope horoscope : horoscopes) {
             log.info(horoscope.toString());
@@ -58,9 +62,9 @@ public class HoroscopeMapperITCase {
         // ensure that the db is in a good state
         sqlSessionTemplate.delete("horoscope.delete", horoscope);
         try {
-            assertEquals((Integer) 0, getInstanceCount(horoscope));
+            int initialCount = getInstanceCount(horoscope);
             sqlSessionTemplate.insert("horoscope.insert", horoscope);
-            assertEquals((Integer) 1, getInstanceCount(horoscope));
+            assertEquals(initialCount + 1, (int) getInstanceCount(horoscope));
         } finally {
             // clean up
             sqlSessionTemplate.delete("horoscope.delete", horoscope);
