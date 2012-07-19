@@ -1,0 +1,4 @@
+ALTER TABLE CAMEL_MESSAGEPROCESSED OWNER TO "horo-app";
+ALTER TABLE feeds OWNER TO "horo-app";
+ALTER TABLE signs OWNER TO "horo-app";
+ALTER TABLE horoscopes OWNER TO "horo-app";

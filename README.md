@@ -25,8 +25,6 @@ An open mind.
 
 Outstanding work
 Basics
-* TODO reproduce non-transactional commit issue
-* TODO avoid duplicate inserts http://camel.apache.org/idempotent-consumer.html
 * TODO add jasypt encryption to db credentials
 * TODO migrations - http://www.mybatis.org/migrations/
 * TODO write out starsign scrubbing code.

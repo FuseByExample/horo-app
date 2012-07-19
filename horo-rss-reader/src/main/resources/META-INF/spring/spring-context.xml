@@ -27,12 +27,18 @@
         <property name="propagationBehaviorName" value="PROPAGATION_REQUIRED"/>
     </bean>
 
+    <bean id="repositoryBuilder" class="net.jakubkorab.horo.rssReader.IdempotentRepositoryBuilder">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="transactionManager" ref="txManager"/>
+    </bean>
+
     <bean id="rssReaderComAstrology" class="net.jakubkorab.horo.rssReader.RssConsumerRouteBuilder">
         <property name="sourceName" value="com.astrology"/>
         <property name="sourceUri"
                   value="rss://http://www.astrology.com/horoscopes/daily-horoscope.rss?splitEntries=false"/>
         <property name="targetUri" value="mybatis:horoscope.insert?statementType=Insert"/>
-        <property name="transactedPolicyRef" value="PROPAGATION_REQUIRED"/>
+        <property name="repositoryBuilder" ref="repositoryBuilder"/>
+        <property name="transactedPolicy" ref="PROPAGATION_REQUIRED"/>
     </bean>
 
     <bean id="rssReaderComAstrologyExtended" class="net.jakubkorab.horo.rssReader.RssConsumerRouteBuilder">
@@ -40,7 +46,8 @@
         <property name="sourceUri"
                   value="rss://http://www.astrology.com/horoscopes/daily-extended.rss?splitEntries=false"/>
         <property name="targetUri" value="mybatis:horoscope.insert?statementType=Insert"/>
-        <property name="transactedPolicyRef" value="PROPAGATION_REQUIRED"/>
+        <property name="repositoryBuilder" ref="repositoryBuilder"/>
+        <property name="transactedPolicy" ref="PROPAGATION_REQUIRED"/>
     </bean>
 
 </beans>

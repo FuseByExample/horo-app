@@ -5,13 +5,6 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <ctx:annotation-config/>
-
-    <!-- TODO check: this is here for more than informational purposes, using Postgres it initialises the connection pool -->
-    <bean id="dataSourceChecker" class="net.jakubkorab.horo.db.DataSourceChecker">
-        <property name="dataSource" ref="dataSource"/>
-    </bean>
-
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
         <property name="configLocation" value="/META-INF/SqlMapConfig.xml"/>

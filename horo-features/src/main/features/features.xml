@@ -28,6 +28,7 @@
         <feature version="${camel-version}">camel-jetty</feature>
         <feature version="${camel-version}">camel-xstream</feature>
         <feature version="${camel-version}">camel-rss</feature>
+        <feature version="${camel-version}">camel-sql</feature>
         <feature version="1.0-SNAPSHOT">horo-model</feature>
         <bundle>mvn:org.springframework/spring-jdbc/${spring-version}</bundle>
         <bundle>mvn:net.jakubkorab/horo-rss-reader/1.0-SNAPSHOT</bundle>

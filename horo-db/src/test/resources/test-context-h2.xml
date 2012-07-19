@@ -6,7 +6,7 @@
        http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc.xsd">
 
     <jdbc:embedded-database id="dataSource" type="H2">
-        <jdbc:script location="classpath:/sql/h2-schema.sql"/>
+        <jdbc:script location="classpath:/sql/schema.sql"/>
     </jdbc:embedded-database>
 
 </beans>

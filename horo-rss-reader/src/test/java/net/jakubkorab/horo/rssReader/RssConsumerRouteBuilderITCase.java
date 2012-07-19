@@ -27,6 +27,7 @@ public class RssConsumerRouteBuilderITCase extends CamelTestSupport {
         builder.setSourceUri("rss://http://localhost:" + httpServer.getPort() + CONTEXT_PATH
                 + "?" + RSS_COMPONENT_OPTIONS);
         builder.setTargetUri("mock:out");
+        builder.setRepositoryBuilder(new IdempotentRepositoryBuilder());
         return builder;
     }
 

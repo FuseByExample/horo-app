@@ -22,6 +22,7 @@ public class RssConsumerRouteBuilderTest extends CamelTestSupport {
         builder.setSourceName("com.astrology");
         builder.setSourceUri("direct:in");
         builder.setTargetUri("mock:out");
+        builder.setRepositoryBuilder(new IdempotentRepositoryBuilder());
 
         SpringTransactionPolicy transactionPolicy = new SpringTransactionPolicy();
 
@@ -37,6 +38,21 @@ public class RssConsumerRouteBuilderTest extends CamelTestSupport {
         template.sendBody("direct:in", body);
 
         mock.setResultWaitTime(3000);
+        mock.assertIsSatisfied();
+        log.info(mock.getReceivedExchanges().get(0).getIn().getBody()
+                .toString());
+    }
+
+    @Test
+    public void testAstrologyComSimpleIdempotence() throws InterruptedException {
+        MockEndpoint mock = getMockEndpoint("mock:out");
+        mock.setExpectedMessageCount(12);
+
+        SyndFeed body = getResourceAsSyndFeed("/com/astrology/2012-06-25.xml");
+        template.sendBody("direct:in", body);
+        template.sendBody("direct:in", body);
+
+        mock.setResultWaitTime(4000);
         mock.assertIsSatisfied();
         log.info(mock.getReceivedExchanges().get(0).getIn().getBody()
                 .toString());
