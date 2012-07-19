@@ -17,6 +17,7 @@
         <module>horo-model</module>
         <module>horo-db</module>
         <module>horo-rss-reader</module>
+        <module>horo-web</module>
         <module>horo-features</module>
     </modules>
 

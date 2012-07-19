@@ -39,6 +39,12 @@
         </osgi:service-properties>
     </osgi:service>
 
+    <osgi:service id="sqlSessionFactory" interface="org.apache.ibatis.session.SqlSessionFactory">
+        <osgi:service-properties>
+            <entry key="database" value="horo-app"/>
+        </osgi:service-properties>
+    </osgi:service>
+
     <bean id="exporter" class="org.springframework.jmx.export.MBeanExporter" lazy-init="false">
         <property name="beans">
             <map>
