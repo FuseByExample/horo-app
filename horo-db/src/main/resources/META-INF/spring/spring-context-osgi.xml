@@ -39,7 +39,7 @@
         </osgi:service-properties>
     </osgi:service>
 
-    <osgi:service id="sqlSessionFactory" interface="org.apache.ibatis.session.SqlSessionFactory">
+    <osgi:service ref="sqlSessionFactory" interface="org.apache.ibatis.session.SqlSessionFactory">
         <osgi:service-properties>
             <entry key="database" value="horo-app"/>
         </osgi:service-properties>
