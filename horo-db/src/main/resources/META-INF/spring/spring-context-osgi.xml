@@ -10,7 +10,7 @@
         http://www.springframework.org/schema/osgi http://www.springframework.org/schema/osgi/spring-osgi.xsd
         http://www.springframework.org/schema/osgi-compendium http://www.springframework.org/schema/osgi-compendium/spring-osgi-compendium.xsd">
 
-    <osgix:cm-properties id="osgi.properties" persistent-id="net.jakubkorab.horo.db">
+    <osgix:cm-properties id="osgi.properties" persistent-id="com.fusesource.examples.horo.db">
         <prop key="pg.server">localhost</prop>
         <prop key="pg.database">horo-db</prop>
         <prop key="pg.port">5432</prop>
@@ -39,7 +39,7 @@
         </osgi:service-properties>
     </osgi:service>
 
-    <osgi:service id="sqlSessionFactory" interface="org.apache.ibatis.session.SqlSessionFactory">
+    <osgi:service ref="sqlSessionFactory" interface="org.apache.ibatis.session.SqlSessionFactory">
         <osgi:service-properties>
             <entry key="database" value="horo-app"/>
         </osgi:service-properties>
@@ -48,7 +48,7 @@
     <bean id="exporter" class="org.springframework.jmx.export.MBeanExporter" lazy-init="false">
         <property name="beans">
             <map>
-                <entry key="net.jakubkorab.horo.db:name=DataSource" value-ref="dataSource"/>
+                <entry key="com.fusesource.examples.horo.db:name=DataSource" value-ref="dataSource"/>
             </map>
         </property>
     </bean>

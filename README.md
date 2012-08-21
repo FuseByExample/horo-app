@@ -1,4 +1,4 @@
-This is an app for checking the validity of horoscopes
+This is an app for aggregating and re-presenting horoscopes.
 
 
 Project layout
@@ -8,8 +8,7 @@ The Maven projects contained within are as follows:
 * `horo-model` - Basic model used by the application
 * `horo-db` - Database access; exposes both a DataSource and a Camel Mybatis component for reuse
 * `horo-rss-reader` - Initial endpoints for consuming RSS feeds
-** TODO split into a template bundle and service instance bundles
-* TODO `horo-web` - REST endpoints that present a view into the database
+* `horo-web` - REST endpoints that present a view into the database
 
 All of the above `ws-` bundles are based on Spring DM.
 

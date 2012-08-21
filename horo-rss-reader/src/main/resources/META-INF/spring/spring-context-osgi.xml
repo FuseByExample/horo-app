@@ -10,7 +10,7 @@
     http://www.springframework.org/schema/osgi http://www.springframework.org/schema/osgi/spring-osgi.xsd
     http://www.springframework.org/schema/osgi-compendium http://www.springframework.org/schema/osgi-compendium/spring-osgi-compendium.xsd">
 
-    <osgix:cm-properties id="osgi.properties" persistent-id="net.jakubkorab.horo.rss-reader">
+    <osgix:cm-properties id="osgi.properties" persistent-id="com.fusesource.examples.hororss-reader">
         <prop key="foo">bar</prop>
     </osgix:cm-properties>
 

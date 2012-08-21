@@ -2,7 +2,7 @@
 <features name="horo-features-1.0-SNAPSHOT">
 
     <feature name="horo-model" version="1.0-SNAPSHOT">
-        <bundle>mvn:net.jakubkorab/horo-model/1.0-SNAPSHOT</bundle>
+        <bundle>mvn:com.fusesource.examples/horo-model/1.0-SNAPSHOT</bundle>
         <bundle>mvn:joda-time/joda-time/${joda-time-version}</bundle>
         <bundle>mvn:commons-lang/commons-lang/${commons-lang-version}</bundle>
     </feature>
@@ -15,7 +15,7 @@
         <bundle>wrap:mvn:commons-dbcp/commons-dbcp/${commons-dbcp-version}</bundle>
         -->
         <bundle>wrap:mvn:c3p0/c3p0/${c3p0-version}</bundle>
-        <bundle>mvn:net.jakubkorab/horo-db/1.0-SNAPSHOT</bundle>
+        <bundle>mvn:com.fusesource.examples/horo-db/1.0-SNAPSHOT</bundle>
         <bundle>mvn:org.mybatis/mybatis/${mybatis-version}</bundle>
         <bundle>mvn:org.mybatis/mybatis-spring/${mybatis-spring-version}</bundle>
         <bundle>mvn:org.springframework/spring-jdbc/${spring-version}</bundle>
@@ -31,7 +31,7 @@
         <feature version="${camel-version}">camel-sql</feature>
         <feature version="1.0-SNAPSHOT">horo-model</feature>
         <bundle>mvn:org.springframework/spring-jdbc/${spring-version}</bundle>
-        <bundle>mvn:net.jakubkorab/horo-rss-reader/1.0-SNAPSHOT</bundle>
+        <bundle>mvn:com.fusesource.examples/horo-rss-reader/1.0-SNAPSHOT</bundle>
     </feature>
 
 </features>

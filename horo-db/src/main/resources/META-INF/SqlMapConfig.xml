@@ -10,14 +10,14 @@
 
     <!-- Use type aliases to avoid typing the full classname every time. -->
     <typeAliases>
-        <typeAlias alias="Horoscope" type="net.jakubkorab.horo.model.Horoscope"/>
+        <typeAlias alias="Horoscope" type="com.fusesource.examples.horo.model.Horoscope"/>
     </typeAliases>
 
     <typeHandlers>
         <typeHandler javaType="org.joda.time.DateTime"
-                     handler="net.jakubkorab.horo.db.typehandler.DateTimeTypeHandler"/>
-        <typeHandler javaType="net.jakubkorab.horo.model.StarSign"
-                     handler="net.jakubkorab.horo.db.typehandler.StarSignTypeHandler"/>
+                     handler="com.fusesource.examples.horo.db.typehandler.DateTimeTypeHandler"/>
+        <typeHandler javaType="com.fusesource.examples.horo.model.StarSign"
+                     handler="com.fusesource.examples.horo.db.typehandler.StarSignTypeHandler"/>
     </typeHandlers>
 
 </configuration>

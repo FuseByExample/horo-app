@@ -13,6 +13,6 @@
         </jaxrs:serviceBeans>
     </jaxrs:server>
 
-    <bean id="horoscopeService" class="net.jakubkorab.horo.web.HoroscopeService"/>
+    <bean id="horoscopeService" class="com.fusesource.examples.horoweb.HoroscopeService"/>
 
 </beans>

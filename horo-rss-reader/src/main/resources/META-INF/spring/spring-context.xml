@@ -11,15 +11,6 @@
         <routeBuilder ref="rssReaderComAstrology"/>
         <routeBuilder ref="rssReaderComAstrologyExtended"/>
 
-        <dataFormats>
-            <json id="json"/>
-        </dataFormats>
-
-        <route id="showHoroscopes">
-            <from uri="jetty://http://localhost:12345/horoscopes"/>
-            <to uri="mybatis:horoscope.selectAll?statementType=SelectList"/>
-            <marshal ref="json"/>
-        </route>
     </camelContext>
 
     <bean id="PROPAGATION_REQUIRED" class="org.apache.camel.spring.spi.SpringTransactionPolicy">
@@ -27,12 +18,12 @@
         <property name="propagationBehaviorName" value="PROPAGATION_REQUIRED"/>
     </bean>
 
-    <bean id="repositoryBuilder" class="net.jakubkorab.horo.rssReader.IdempotentRepositoryBuilder">
+    <bean id="repositoryBuilder" class="com.fusesource.examples.horo.rssReader.IdempotentRepositoryBuilder">
         <property name="dataSource" ref="dataSource"/>
         <property name="transactionManager" ref="txManager"/>
     </bean>
 
-    <bean id="rssReaderComAstrology" class="net.jakubkorab.horo.rssReader.RssConsumerRouteBuilder">
+    <bean id="rssReaderComAstrology" class="com.fusesource.examples.horo.rssReader.RssConsumerRouteBuilder">
         <property name="sourceName" value="com.astrology"/>
         <property name="sourceUri"
                   value="rss://http://www.astrology.com/horoscopes/daily-horoscope.rss?splitEntries=false"/>
@@ -41,7 +32,7 @@
         <property name="transactedPolicy" ref="PROPAGATION_REQUIRED"/>
     </bean>
 
-    <bean id="rssReaderComAstrologyExtended" class="net.jakubkorab.horo.rssReader.RssConsumerRouteBuilder">
+    <bean id="rssReaderComAstrologyExtended" class="com.fusesource.examples.horo.rssReader.RssConsumerRouteBuilder">
         <property name="sourceName" value="com.astrology.extended"/>
         <property name="sourceUri"
                   value="rss://http://www.astrology.com/horoscopes/daily-extended.rss?splitEntries=false"/>
