@@ -1,5 +1,16 @@
-This is an app for aggregating and re-presenting horoscopes.
+This project presents a sample app for aggregating and re-presenting horoscopes. It is designed to highlight a number of areas for discussion that are usually overlooked. These include:
 
+* various levels of testing, and their general appropriateness ranging from simple unit tests to integration tests
+    * how to get integration tests playing nicely within a shared build environment - loads of developers, a CI server
+    * a couple of different ways of testing a Camel route
+        * using the standard `CamelSpringTestSupport` approach with `mock:` and `direct:` endpoints
+        * exercising an actual component against an embedded web server (assigned to a unique port)
+* setting up MyBatis for data access across OSGi bundles that actively demonstrates the [mybatis](http://www.mybatis.org/core/) and [mybatis-spring](http://www.mybatis.org/spring/index.html) documentation, with
+    * Spring transaction management for [camel-mybatis](http://camel.apache.org/mybatis.html)
+    * configuration externalised using the OSGi Config Admin mechanisms (property files in the `$SMX_HOME/etc` directory)
+    * testing the correctness of data access against an embedded H2 database (contentious and potentially not applicable to all your access needs)
+* reuse of expensive resources such as `DataSource`s between disparate bundles through the use of service references
+* configuration of database drivers and connection pools ([c3p0](http://www.mchange.com/projects/c3p0/index.html)) in an OSGi environment
 
 Project layout
 ==============
@@ -12,7 +23,7 @@ The Maven projects contained within are as follows:
 
 All of the above `ws-` bundles are based on Spring DM.
 
-There are two additional parent projects that simplify the Maven project configuration:
+There are three additional parent projects that simplify the Maven project configuration:
 
 * `bundle-parent` - used as parent by all bundles
 * `camel-bundle-parent` - used as parent by all bundles
@@ -20,19 +31,9 @@ There are two additional parent projects that simplify the Maven project configu
 
 Prerequisites
 =============
-An open mind.
 
-Outstanding work
-Basics
-* TODO add jasypt encryption to db credentials
-* TODO migrations - http://www.mybatis.org/migrations/
-* TODO write out starsign scrubbing code.
-* TODO remove need for enforcer to run every time
+1. This project has been designed against ServiceMix [4.4.1-fuse-08-15](http://repo.fusesource.com/nexus/content/groups/public/org/apache/servicemix/apache-servicemix/4.4.1-fuse-08-15/)
+1. The database backend requires an instance of Postgres 9.1, though older versions may work fine - all SQL has been written to the SQL92 standard.
 
-Scrapers
-* TODO horoscopes.co.uk - scraping
-* TODO horoscope.com - scraping, 1st <div id="textline">
-** http://www.mirror.co.uk/lifestyle/horoscopes/daily/aries/
-** div[class="horoscopes-intro"]/h2/Today's Horoscope/p/Make a special point of occupying yourself with tasks you find easy to do. Focus on jobs that will not need a lot of concentration or specialist knowledge. Complicated ventures will only have you running around in circles. These are best left alone until you feel more able to handle the challenge.
 
-* TODO Error handling for odd scrapers.
+

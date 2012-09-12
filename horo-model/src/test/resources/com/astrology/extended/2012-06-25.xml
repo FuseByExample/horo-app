@@ -1,86 +1,354 @@
 <?xml version="1.0"?>
+<!--
+  ~ Copyright 2012 FuseSource
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
 <rss version="2.0">
-  <channel>
-    <title>Astrology.com Daily Extended Horoscopes</title>
-    <link>http://www.astrology.com/horoscopes/daily-extended.rss</link>
-    <description>Get free Horoscopes and Astrology from Astrology.com.</description>
-    <language>en-us</language>
-    <image>
-      <url>http://www.astrology.com/images/framework/block/astro-header/bg-logo.gif</url>
-      <title>Astrology.com feed of Daily Extended Horoscopes</title>
-      <link>http://www.astrology.com/horoscopes/daily-extended.rss</link>
-    </image>
-    <item>
-      <title>Aquarius Daily Extended Horoscopes for June 25, 2012</title>
-      <pubDate>Mon, 25 Jun 2012 00:00:00 +0000</pubDate>
-      <description>&lt;p&gt;If the daily grind is getting you down right now, seek the comfort of your home, friends and family. These things will help you feel more grounded and content. So bow out of wild adventures right now -- and get back in touch with the truly important things in life. Your people would love a chance to spend some more time with you. Also, quite a few of your relationships could use a bit more of your attention, and the timing is perfect for that now.&lt;/p&gt;&lt;p&gt;More horoscopes! Check your &lt;a href='http://www.astrology.com/horoscopes/details/2012-06-25/aquarius-daily-singles?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily Single's LoveScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes/details/2012-06-25/aquarius-daily-couples?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily Couple's LoveScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes/details/2012-06-25/aquarius-daily-work?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily CareerScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes/details/2012-06-25/aquarius-weekly-romantic?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Weekly RomanticScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes/details/2012-06-01/aquarius-monthly-fitness?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Monthly FitnessScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes?dst=rss%7Cast_horo%7Cdx'&gt;more&lt;/a&gt;...&lt;/p&gt;&lt;p&gt;Today's Free Sample Reading: &lt;a href='http://www.astrology.com/year-dragon-financial-forecast/2-p-317138?dst=rss%7Cast_horo%7Cdx_offer'&gt;Check out this forecast, which looks at how you'll fare financially during the Year of the Dragon.&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href='http://www.astrology.com/redir?ice=rss%7Cast_horo%7Cdx_keen&amp;iv_url=http%3A%2F%2Fwww.astrology.com%2Fpsychics'&gt;Is it really over? Need to know the answers? Put your mind at ease. Get a Free Psychic Love Reading today. &lt;/a&gt;&lt;/p&gt;</description>
-      <link>http://www.astrology.com/horoscopes/details/2012-06-25/aquarius-daily-extended?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope</link>
-    </item>
-    <item>
-      <title>Aries Daily Extended Horoscopes for June 25, 2012</title>
-      <pubDate>Mon, 25 Jun 2012 00:00:00 +0000</pubDate>
-      <description>&lt;p&gt;You might feel a bit under siege today -- many people may be demanding your time and energy, when you want to focus on your home and your family. Trying to negotiate with these people will likely be disappointing; they are so focused on themselves today that they will have a hard time taking your personal needs seriously. Feel free to disengage and do what you need and want to do. Don't burn any bridges -- but do take note of the people who react especially poorly.&lt;/p&gt;&lt;p&gt;More horoscopes! Check your &lt;a href='http://www.astrology.com/horoscopes/details/2012-06-25/aries-daily-singles?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily Single's LoveScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes/details/2012-06-25/aries-daily-couples?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily Couple's LoveScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes/details/2012-06-25/aries-daily-work?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily CareerScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes/details/2012-06-25/aries-weekly-romantic?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Weekly RomanticScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes/details/2012-06-01/aries-monthly-fitness?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Monthly FitnessScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes?dst=rss%7Cast_horo%7Cdx'&gt;more&lt;/a&gt;...&lt;/p&gt;&lt;p&gt;Today's Free Sample Reading: &lt;a href='http://www.astrology.com/vedic-matchmaker/2-p-5141?dst=rss%7Cast_horo%7Cdx_offer'&gt;Are you meant to be together? Get answers from the most comprehensive reading on Vedic compatibility today!&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href='http://www.astrology.com/redir?ice=rss%7Cast_horo%7Cdx_keen&amp;iv_url=http%3A%2F%2Fwww.astrology.com%2Fpsychics'&gt;Is it really over? What romantic adventures are in store for you? Get a Free Psychic Reading today. &lt;/a&gt;&lt;/p&gt;</description>
-      <link>http://www.astrology.com/horoscopes/details/2012-06-25/aries-daily-extended?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope</link>
-    </item>
-    <item>
-      <title>Cancer Daily Extended Horoscopes for June 25, 2012</title>
-      <pubDate>Mon, 25 Jun 2012 00:00:00 +0000</pubDate>
-      <description>&lt;p&gt;Your eye for detail will get you into a very interesting situation today, when something almost imperceptible about a new acquaintance grabs your attention. You are noticing things about people that they don't realize yet about themselves. Hold on to these little revelations -- they are your secrets, and you should divulge them only if you want to. One person in particular is about to blossom in a way that she or he never expected. Enjoy your front-row seat!&lt;/p&gt;&lt;p&gt;More horoscopes! Check your &lt;a href='http://www.astrology.com/horoscopes/details/2012-06-25/cancer-daily-singles?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily Single's LoveScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes/details/2012-06-25/cancer-daily-couples?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily Couple's LoveScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes/details/2012-06-25/cancer-daily-work?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily CareerScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes/details/2012-06-25/cancer-weekly-romantic?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Weekly RomanticScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes/details/2012-06-01/cancer-monthly-fitness?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Monthly FitnessScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes?dst=rss%7Cast_horo%7Cdx'&gt;more&lt;/a&gt;...&lt;/p&gt;&lt;p&gt;Today's Free Sample Reading: &lt;a href='http://www.astrology.com/harmony-reading-0/2-p-155960?dst=rss%7Cast_horo%7Cdx_offer'&gt;Want to get along better with a family member or a co-worker? Preview a free sample of this powerful reading today!&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href='http://www.astrology.com/redir?ice=rss%7Cast_horo%7Cdx_keen&amp;iv_url=http%3A%2F%2Fwww.astrology.com%2Fpsychics'&gt;Is it really over? Find your path to fulfillment with a Free Psychic Love Reading. &lt;/a&gt;&lt;/p&gt;</description>
-      <link>http://www.astrology.com/horoscopes/details/2012-06-25/cancer-daily-extended?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope</link>
-    </item>
-    <item>
-      <title>Capricorn Daily Extended Horoscopes for June 25, 2012</title>
-      <pubDate>Mon, 25 Jun 2012 00:00:00 +0000</pubDate>
-      <description>&lt;p&gt;Trying too hard to fit in can really drain your energy, so stop trying! You need to understand that just being yourself makes you much more desirable than trying to be a carbon copy of someone else does. By sticking to your own identity, you show people that you are proud of who you are -- and that you're strong. If you act too wishy-washy or are constantly trying to meet the expectations of others, you show people that you don't know who you really are -- which isn't true.&lt;/p&gt;&lt;p&gt;More horoscopes! Check your &lt;a href='http://www.astrology.com/horoscopes/details/2012-06-25/capricorn-daily-singles?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily Single's LoveScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes/details/2012-06-25/capricorn-daily-couples?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily Couple's LoveScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes/details/2012-06-25/capricorn-daily-work?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily CareerScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes/details/2012-06-25/capricorn-weekly-romantic?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Weekly RomanticScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes/details/2012-06-01/capricorn-monthly-fitness?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Monthly FitnessScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes?dst=rss%7Cast_horo%7Cdx'&gt;more&lt;/a&gt;...&lt;/p&gt;&lt;p&gt;Today's Free Sample Reading: &lt;a href='http://www.astrology.com/goddess-within/2-p-5111?dst=rss%7Cast_horo%7Cdx_offer'&gt;Express your potential and desires from a woman's point of view. Learn about your personal power and how to express it!&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href='http://www.astrology.com/redir?ice=rss%7Cast_horo%7Cdx_keen&amp;iv_url=http%3A%2F%2Fwww.astrology.com%2Fpsychics'&gt;Is it really over? What romantic adventures are in store for you? Get a Free Psychic Reading today. &lt;/a&gt;&lt;/p&gt;</description>
-      <link>http://www.astrology.com/horoscopes/details/2012-06-25/capricorn-daily-extended?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope</link>
-    </item>
-    <item>
-      <title>Gemini Daily Extended Horoscopes for June 25, 2012</title>
-      <pubDate>Mon, 25 Jun 2012 00:00:00 +0000</pubDate>
-      <description>&lt;p&gt;If you feel good, then the people who love you will also feel good -- so don't feel guilty if you put your desires above other people's today. You deserve some indulgences right now, and you should think about something nice you can do for yourself. Should you treat yourself to a spa day? Or how about going on a weekend trip to one of your favorite places? Whatever you do, do it all the way. This is not the time for cutting corners.&lt;/p&gt;&lt;p&gt;More horoscopes! Check your &lt;a href='http://www.astrology.com/horoscopes/details/2012-06-25/gemini-daily-singles?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily Single's LoveScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes/details/2012-06-25/gemini-daily-couples?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily Couple's LoveScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes/details/2012-06-25/gemini-daily-work?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily CareerScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes/details/2012-06-25/gemini-weekly-romantic?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Weekly RomanticScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes/details/2012-06-01/gemini-monthly-fitness?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Monthly FitnessScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes?dst=rss%7Cast_horo%7Cdx'&gt;more&lt;/a&gt;...&lt;/p&gt;&lt;p&gt;Today's Free Sample Reading: &lt;a href='http://www.astrology.com/personal-astrology-profile/2-p-5052?dst=rss%7Cast_horo%7Cdx_offer'&gt;What makes you unique? Discover a snapshot of the cosmos at your birth and discover planetary forces that shape you.&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href='http://www.astrology.com/redir?ice=rss%7Cast_horo%7Cdx_keen&amp;iv_url=http%3A%2F%2Fwww.astrology.com%2Fpsychics'&gt;Is it really over? How do you know if you&amp;rsquo;ve met your soul mate? Find out with a Free Psychic Love Reading. &lt;/a&gt;&lt;/p&gt;</description>
-      <link>http://www.astrology.com/horoscopes/details/2012-06-25/gemini-daily-extended?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope</link>
-    </item>
-    <item>
-      <title>Leo Daily Extended Horoscopes for June 25, 2012</title>
-      <pubDate>Mon, 25 Jun 2012 00:00:00 +0000</pubDate>
-      <description>&lt;p&gt;Someone who you thought was on your side, and whom you've been relying on as a confidant, might be acting as a double agent in a relatively trivial caper. If you've been planning an event for a friend, resist the urge to delegate too much to someone who seems just a little bit too eager to help. This person may have an ulterior motive. While you shouldn't doubt the people you love and trust, be a bit wary of people who haven't yet proved themselves to you.&lt;/p&gt;&lt;p&gt;More horoscopes! Check your &lt;a href='http://www.astrology.com/horoscopes/details/2012-06-25/leo-daily-singles?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily Single's LoveScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes/details/2012-06-25/leo-daily-couples?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily Couple's LoveScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes/details/2012-06-25/leo-daily-work?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily CareerScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes/details/2012-06-25/leo-weekly-romantic?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Weekly RomanticScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes/details/2012-06-01/leo-monthly-fitness?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Monthly FitnessScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes?dst=rss%7Cast_horo%7Cdx'&gt;more&lt;/a&gt;...&lt;/p&gt;&lt;p&gt;Today's Free Sample Reading: &lt;a href='http://www.astrology.com/destiny-reading/2-p-5169?dst=rss%7Cast_horo%7Cdx_offer'&gt;Are you making the right decisions? Get the insight of the stars into your life's focus and future now!&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href='http://www.astrology.com/redir?ice=rss%7Cast_horo%7Cdx_keen&amp;iv_url=http%3A%2F%2Fwww.astrology.com%2Fpsychics'&gt;Is it really over? Afraid of being alone? Find out where your soul mate is hiding with a Free Psychic Love Reading.  &lt;/a&gt;&lt;/p&gt;</description>
-      <link>http://www.astrology.com/horoscopes/details/2012-06-25/leo-daily-extended?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope</link>
-    </item>
-    <item>
-      <title>Libra Daily Extended Horoscopes for June 25, 2012</title>
-      <pubDate>Mon, 25 Jun 2012 00:00:00 +0000</pubDate>
-      <description>&lt;p&gt;After a lot of socializing recently, you are finally getting the chance to spend some quality time on your own. You may think you still want to be out and about and enjoying the wild life today, but once you get a little taste of solitude, you will settle into it happily. This inward-focused time is a luxury. Feel free to ignore the rest of the world (as much as you can) and enjoy some introspection and relaxation.&lt;/p&gt;&lt;p&gt;More horoscopes! Check your &lt;a href='http://www.astrology.com/horoscopes/details/2012-06-25/libra-daily-singles?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily Single's LoveScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes/details/2012-06-25/libra-daily-couples?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily Couple's LoveScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes/details/2012-06-25/libra-daily-work?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily CareerScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes/details/2012-06-25/libra-weekly-romantic?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Weekly RomanticScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes/details/2012-06-01/libra-monthly-fitness?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Monthly FitnessScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes?dst=rss%7Cast_horo%7Cdx'&gt;more&lt;/a&gt;...&lt;/p&gt;&lt;p&gt;Today's Free Sample Reading: &lt;a href='http://www.astrology.com/maya-aztec-reading/2-p-5167?dst=rss%7Cast_horo%7Cdx_offer'&gt;Based on the ancient science of Maya-Aztec astrology, delve deep into your inner self with this reading!&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href='http://www.astrology.com/redir?ice=rss%7Cast_horo%7Cdx_keen&amp;iv_url=http%3A%2F%2Fwww.astrology.com%2Fpsychics'&gt;Is it really over? Need to know the answers? Put your mind at ease. Get a Free Psychic Love Reading today. &lt;/a&gt;&lt;/p&gt;</description>
-      <link>http://www.astrology.com/horoscopes/details/2012-06-25/libra-daily-extended?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope</link>
-    </item>
-    <item>
-      <title>Pisces Daily Extended Horoscopes for June 25, 2012</title>
-      <pubDate>Mon, 25 Jun 2012 00:00:00 +0000</pubDate>
-      <description>&lt;p&gt;You're projecting an aura of calm confidence today -- so who cares if you aren't feeling quite as confident as you look? Image can be a powerful thing, and you can use yours to make waves that turn the tide your way! Your bravado is a mask you can wear to make it through the tough times -- the times when you don't feel completely comfortable. In any new situation you encounter today, try to look as though you know what you're doing, even if you don't.&lt;/p&gt;&lt;p&gt;More horoscopes! Check your &lt;a href='http://www.astrology.com/horoscopes/details/2012-06-25/pisces-daily-singles?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily Single's LoveScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes/details/2012-06-25/pisces-daily-couples?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily Couple's LoveScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes/details/2012-06-25/pisces-daily-work?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily CareerScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes/details/2012-06-25/pisces-weekly-romantic?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Weekly RomanticScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes/details/2012-06-01/pisces-monthly-fitness?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Monthly FitnessScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes?dst=rss%7Cast_horo%7Cdx'&gt;more&lt;/a&gt;...&lt;/p&gt;&lt;p&gt;Today's Free Sample Reading: &lt;a href='http://www.astrology.com/relationship-forecast/2-p-142146?dst=rss%7Cast_horo%7Cdx_offer'&gt;Discover the future of your relationship with a combined natal chart!&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href='http://www.astrology.com/redir?ice=rss%7Cast_horo%7Cdx_keen&amp;iv_url=http%3A%2F%2Fwww.astrology.com%2Fpsychics'&gt;Is it really over? Find your path to fulfillment with a Free Psychic Love Reading. &lt;/a&gt;&lt;/p&gt;</description>
-      <link>http://www.astrology.com/horoscopes/details/2012-06-25/pisces-daily-extended?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope</link>
-    </item>
-    <item>
-      <title>Sagittarius Daily Extended Horoscopes for June 25, 2012</title>
-      <pubDate>Mon, 25 Jun 2012 00:00:00 +0000</pubDate>
-      <description>&lt;p&gt;With a huge increase in your energy level coming, you run the risk of rushing ahead before you're totally ready to move forward. Beware of leaving the house without a coat, forgetting your keys in the lock or driving to the bank but leaving your wallet at home! Your mind is busy cooking up big ideas and imagining big outcomes -- but you're in danger of forgetting to tie your shoes! Watch for absentmindedness today -- don't lose sight of the here and now!&lt;/p&gt;&lt;p&gt;More horoscopes! Check your &lt;a href='http://www.astrology.com/horoscopes/details/2012-06-25/sagittarius-daily-singles?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily Single's LoveScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes/details/2012-06-25/sagittarius-daily-couples?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily Couple's LoveScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes/details/2012-06-25/sagittarius-daily-work?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily CareerScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes/details/2012-06-25/sagittarius-weekly-romantic?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Weekly RomanticScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes/details/2012-06-01/sagittarius-monthly-fitness?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Monthly FitnessScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes?dst=rss%7Cast_horo%7Cdx'&gt;more&lt;/a&gt;...&lt;/p&gt;&lt;p&gt;Today's Free Sample Reading: &lt;a href='http://www.astrology.com/love-forecast/2-p-142156?dst=rss%7Cast_horo%7Cdx_offer'&gt;Try a preview of your one-week Love Forecast! Make the most out of your love life this year and beyond!&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href='http://www.astrology.com/redir?ice=rss%7Cast_horo%7Cdx_keen&amp;iv_url=http%3A%2F%2Fwww.astrology.com%2Fpsychics'&gt;Is it really over? Welcome new beginnings with a Free Psychic Love Reading. &lt;/a&gt;&lt;/p&gt;</description>
-      <link>http://www.astrology.com/horoscopes/details/2012-06-25/sagittarius-daily-extended?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope</link>
-    </item>
-    <item>
-      <title>Scorpio Daily Extended Horoscopes for June 25, 2012</title>
-      <pubDate>Mon, 25 Jun 2012 00:00:00 +0000</pubDate>
-      <description>&lt;p&gt;If you're stuck in planning mode today, make it a group affair. Getting a consensus about dates, locations and activities will make everyone feel like part of the big picture -- and it will set a much more positive tone for your upcoming event. Other people will be able to suggest things that you hadn't considered before -- and they will also remember small details that make a big impression. There's no question that a group effort is the best effort.&lt;/p&gt;&lt;p&gt;More horoscopes! Check your &lt;a href='http://www.astrology.com/horoscopes/details/2012-06-25/scorpio-daily-singles?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily Single's LoveScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes/details/2012-06-25/scorpio-daily-couples?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily Couple's LoveScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes/details/2012-06-25/scorpio-daily-work?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily CareerScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes/details/2012-06-25/scorpio-weekly-romantic?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Weekly RomanticScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes/details/2012-06-01/scorpio-monthly-fitness?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Monthly FitnessScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes?dst=rss%7Cast_horo%7Cdx'&gt;more&lt;/a&gt;...&lt;/p&gt;&lt;p&gt;Today's Free Sample Reading: &lt;a href='http://www.astrology.com/year-dragon-financial-forecast/2-p-317138?dst=rss%7Cast_horo%7Cdx_offer'&gt;Check out this forecast, which looks at how you'll fare financially during the Year of the Dragon.&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href='http://www.astrology.com/redir?ice=rss%7Cast_horo%7Cdx_keen&amp;iv_url=http%3A%2F%2Fwww.astrology.com%2Fpsychics'&gt;Is it really over? Welcome new beginnings with a Free Psychic Love Reading. &lt;/a&gt;&lt;/p&gt;</description>
-      <link>http://www.astrology.com/horoscopes/details/2012-06-25/scorpio-daily-extended?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope</link>
-    </item>
-    <item>
-      <title>Taurus Daily Extended Horoscopes for June 25, 2012</title>
-      <pubDate>Mon, 25 Jun 2012 00:00:00 +0000</pubDate>
-      <description>&lt;p&gt;Your charm will meet its delightful match today, when you run into someone you know through a friend. This person's flattering words and witty conversation will entertain you -- and make you aware of some facets of your personality that you weren't aware of before. Turns out, you are even more charming than you thought! Listening to and laughing with this person could take up your whole day if you let it, so keep an eye on your schedule.&lt;/p&gt;&lt;p&gt;More horoscopes! Check your &lt;a href='http://www.astrology.com/horoscopes/details/2012-06-25/taurus-daily-singles?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily Single's LoveScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes/details/2012-06-25/taurus-daily-couples?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily Couple's LoveScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes/details/2012-06-25/taurus-daily-work?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily CareerScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes/details/2012-06-25/taurus-weekly-romantic?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Weekly RomanticScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes/details/2012-06-01/taurus-monthly-fitness?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Monthly FitnessScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes?dst=rss%7Cast_horo%7Cdx'&gt;more&lt;/a&gt;...&lt;/p&gt;&lt;p&gt;Today's Free Sample Reading: &lt;a href='http://www.astrology.com/numerology-forecast/2-p-5162?dst=rss%7Cast_horo%7Cdx_offer'&gt;Make this year your best year ever! Get a free overview including your Personal Year Number!&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href='http://www.astrology.com/redir?ice=rss%7Cast_horo%7Cdx_keen&amp;iv_url=http%3A%2F%2Fwww.astrology.com%2Fpsychics'&gt;Is it really over? Need to know the answers? Put your mind at ease. Get a Free Psychic Love Reading today. &lt;/a&gt;&lt;/p&gt;</description>
-      <link>http://www.astrology.com/horoscopes/details/2012-06-25/taurus-daily-extended?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope</link>
-    </item>
-    <item>
-      <title>Virgo Daily Extended Horoscopes for June 25, 2012</title>
-      <pubDate>Mon, 25 Jun 2012 00:00:00 +0000</pubDate>
-      <description>&lt;p&gt;It's the small details that will cause the biggest problems today, so get out your magnifying glass and take a closer look at what's going down today. Little comments a friend whispers to himself or herself will reveal big truths -- so don't pretend you don't hear them. It's time to deal with this issue once and for all, and put negative feelings behind you. It will feel good to get rid of the tiny doubts that you've been having about your relationship.&lt;/p&gt;&lt;p&gt;More horoscopes! Check your &lt;a href='http://www.astrology.com/horoscopes/details/2012-06-25/virgo-daily-singles?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily Single's LoveScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes/details/2012-06-25/virgo-daily-couples?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily Couple's LoveScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes/details/2012-06-25/virgo-daily-work?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily CareerScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes/details/2012-06-25/virgo-weekly-romantic?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Weekly RomanticScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes/details/2012-06-01/virgo-monthly-fitness?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Monthly FitnessScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes?dst=rss%7Cast_horo%7Cdx'&gt;more&lt;/a&gt;...&lt;/p&gt;&lt;p&gt;Today's Free Sample Reading: &lt;a href='http://www.astrology.com/day-day-forecast/2-p-279268?dst=rss%7Cast_horo%7Cdx_offer'&gt;Look forward to the coming year with this forecast as your road map. Get a free one-week preview now!&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href='http://www.astrology.com/redir?ice=rss%7Cast_horo%7Cdx_keen&amp;iv_url=http%3A%2F%2Fwww.astrology.com%2Fpsychics'&gt;Is it really over? What romantic adventures are in store for you? Get a Free Psychic Reading today. &lt;/a&gt;&lt;/p&gt;</description>
-      <link>http://www.astrology.com/horoscopes/details/2012-06-25/virgo-daily-extended?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope</link>
-    </item>
-  </channel>
+    <channel>
+        <title>Astrology.com Daily Extended Horoscopes</title>
+        <link>http://www.astrology.com/horoscopes/daily-extended.rss</link>
+        <description>Get free Horoscopes and Astrology from Astrology.com.</description>
+        <language>en-us</language>
+        <image>
+            <url>http://www.astrology.com/images/framework/block/astro-header/bg-logo.gif</url>
+            <title>Astrology.com feed of Daily Extended Horoscopes</title>
+            <link>http://www.astrology.com/horoscopes/daily-extended.rss</link>
+        </image>
+        <item>
+            <title>Aquarius Daily Extended Horoscopes for June 25, 2012</title>
+            <pubDate>Mon, 25 Jun 2012 00:00:00 +0000</pubDate>
+            <description>&lt;p&gt;If the daily grind is getting you down right now, seek the comfort of your home,
+                friends and family. These things will help you feel more grounded and content. So bow out of wild
+                adventures right now -- and get back in touch with the truly important things in life. Your people would
+                love a chance to spend some more time with you. Also, quite a few of your relationships could use a bit
+                more of your attention, and the timing is perfect for that now.&lt;/p&gt;&lt;p&gt;More horoscopes! Check
+                your &lt;a
+                href='http://www.astrology.com/horoscopes/details/2012-06-25/aquarius-daily-singles?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily
+                Single's LoveScopes&lt;/a&gt;, &lt;a
+                href='http://www.astrology.com/horoscopes/details/2012-06-25/aquarius-daily-couples?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily
+                Couple's LoveScopes&lt;/a&gt;, &lt;a
+                href='http://www.astrology.com/horoscopes/details/2012-06-25/aquarius-daily-work?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily
+                CareerScopes&lt;/a&gt;, &lt;a
+                href='http://www.astrology.com/horoscopes/details/2012-06-25/aquarius-weekly-romantic?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Weekly
+                RomanticScopes&lt;/a&gt;, &lt;a
+                href='http://www.astrology.com/horoscopes/details/2012-06-01/aquarius-monthly-fitness?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Monthly
+                FitnessScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes?dst=rss%7Cast_horo%7Cdx'&gt;more&lt;/a&gt;...&lt;/p&gt;&lt;p&gt;Today's
+                Free Sample Reading: &lt;a
+                href='http://www.astrology.com/year-dragon-financial-forecast/2-p-317138?dst=rss%7Cast_horo%7Cdx_offer'&gt;Check
+                out this forecast, which looks at how you'll fare financially during the Year of the Dragon.&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a
+                href='http://www.astrology.com/redir?ice=rss%7Cast_horo%7Cdx_keen&amp;iv_url=http%3A%2F%2Fwww.astrology.com%2Fpsychics'&gt;Is
+                it really over? Need to know the answers? Put your mind at ease. Get a Free Psychic Love Reading today.
+                &lt;/a&gt;&lt;/p&gt;</description>
+            <link>http://www.astrology.com/horoscopes/details/2012-06-25/aquarius-daily-extended?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope</link>
+        </item>
+        <item>
+            <title>Aries Daily Extended Horoscopes for June 25, 2012</title>
+            <pubDate>Mon, 25 Jun 2012 00:00:00 +0000</pubDate>
+            <description>&lt;p&gt;You might feel a bit under siege today -- many people may be demanding your time and
+                energy, when you want to focus on your home and your family. Trying to negotiate with these people will
+                likely be disappointing; they are so focused on themselves today that they will have a hard time taking
+                your personal needs seriously. Feel free to disengage and do what you need and want to do. Don't burn
+                any bridges -- but do take note of the people who react especially poorly.&lt;/p&gt;&lt;p&gt;More
+                horoscopes! Check your &lt;a
+                href='http://www.astrology.com/horoscopes/details/2012-06-25/aries-daily-singles?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily
+                Single's LoveScopes&lt;/a&gt;, &lt;a
+                href='http://www.astrology.com/horoscopes/details/2012-06-25/aries-daily-couples?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily
+                Couple's LoveScopes&lt;/a&gt;, &lt;a
+                href='http://www.astrology.com/horoscopes/details/2012-06-25/aries-daily-work?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily
+                CareerScopes&lt;/a&gt;, &lt;a
+                href='http://www.astrology.com/horoscopes/details/2012-06-25/aries-weekly-romantic?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Weekly
+                RomanticScopes&lt;/a&gt;, &lt;a
+                href='http://www.astrology.com/horoscopes/details/2012-06-01/aries-monthly-fitness?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Monthly
+                FitnessScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes?dst=rss%7Cast_horo%7Cdx'&gt;more&lt;/a&gt;...&lt;/p&gt;&lt;p&gt;Today's
+                Free Sample Reading: &lt;a
+                href='http://www.astrology.com/vedic-matchmaker/2-p-5141?dst=rss%7Cast_horo%7Cdx_offer'&gt;Are you meant
+                to be together? Get answers from the most comprehensive reading on Vedic compatibility today!&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a
+                href='http://www.astrology.com/redir?ice=rss%7Cast_horo%7Cdx_keen&amp;iv_url=http%3A%2F%2Fwww.astrology.com%2Fpsychics'&gt;Is
+                it really over? What romantic adventures are in store for you? Get a Free Psychic Reading today. &lt;/a&gt;&lt;/p&gt;</description>
+            <link>http://www.astrology.com/horoscopes/details/2012-06-25/aries-daily-extended?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope</link>
+        </item>
+        <item>
+            <title>Cancer Daily Extended Horoscopes for June 25, 2012</title>
+            <pubDate>Mon, 25 Jun 2012 00:00:00 +0000</pubDate>
+            <description>&lt;p&gt;Your eye for detail will get you into a very interesting situation today, when
+                something almost imperceptible about a new acquaintance grabs your attention. You are noticing things
+                about people that they don't realize yet about themselves. Hold on to these little revelations -- they
+                are your secrets, and you should divulge them only if you want to. One person in particular is about to
+                blossom in a way that she or he never expected. Enjoy your front-row seat!&lt;/p&gt;&lt;p&gt;More
+                horoscopes! Check your &lt;a
+                href='http://www.astrology.com/horoscopes/details/2012-06-25/cancer-daily-singles?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily
+                Single's LoveScopes&lt;/a&gt;, &lt;a
+                href='http://www.astrology.com/horoscopes/details/2012-06-25/cancer-daily-couples?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily
+                Couple's LoveScopes&lt;/a&gt;, &lt;a
+                href='http://www.astrology.com/horoscopes/details/2012-06-25/cancer-daily-work?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily
+                CareerScopes&lt;/a&gt;, &lt;a
+                href='http://www.astrology.com/horoscopes/details/2012-06-25/cancer-weekly-romantic?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Weekly
+                RomanticScopes&lt;/a&gt;, &lt;a
+                href='http://www.astrology.com/horoscopes/details/2012-06-01/cancer-monthly-fitness?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Monthly
+                FitnessScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes?dst=rss%7Cast_horo%7Cdx'&gt;more&lt;/a&gt;...&lt;/p&gt;&lt;p&gt;Today's
+                Free Sample Reading: &lt;a
+                href='http://www.astrology.com/harmony-reading-0/2-p-155960?dst=rss%7Cast_horo%7Cdx_offer'&gt;Want to
+                get along better with a family member or a co-worker? Preview a free sample of this powerful reading
+                today!&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a
+                href='http://www.astrology.com/redir?ice=rss%7Cast_horo%7Cdx_keen&amp;iv_url=http%3A%2F%2Fwww.astrology.com%2Fpsychics'&gt;Is
+                it really over? Find your path to fulfillment with a Free Psychic Love Reading.
+                &lt;/a&gt;&lt;/p&gt;</description>
+            <link>http://www.astrology.com/horoscopes/details/2012-06-25/cancer-daily-extended?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope</link>
+        </item>
+        <item>
+            <title>Capricorn Daily Extended Horoscopes for June 25, 2012</title>
+            <pubDate>Mon, 25 Jun 2012 00:00:00 +0000</pubDate>
+            <description>&lt;p&gt;Trying too hard to fit in can really drain your energy, so stop trying! You need to
+                understand that just being yourself makes you much more desirable than trying to be a carbon copy of
+                someone else does. By sticking to your own identity, you show people that you are proud of who you are
+                -- and that you're strong. If you act too wishy-washy or are constantly trying to meet the expectations
+                of others, you show people that you don't know who you really are -- which isn't true.&lt;/p&gt;&lt;p&gt;More
+                horoscopes! Check your &lt;a
+                href='http://www.astrology.com/horoscopes/details/2012-06-25/capricorn-daily-singles?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily
+                Single's LoveScopes&lt;/a&gt;, &lt;a
+                href='http://www.astrology.com/horoscopes/details/2012-06-25/capricorn-daily-couples?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily
+                Couple's LoveScopes&lt;/a&gt;, &lt;a
+                href='http://www.astrology.com/horoscopes/details/2012-06-25/capricorn-daily-work?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily
+                CareerScopes&lt;/a&gt;, &lt;a
+                href='http://www.astrology.com/horoscopes/details/2012-06-25/capricorn-weekly-romantic?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Weekly
+                RomanticScopes&lt;/a&gt;, &lt;a
+                href='http://www.astrology.com/horoscopes/details/2012-06-01/capricorn-monthly-fitness?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Monthly
+                FitnessScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes?dst=rss%7Cast_horo%7Cdx'&gt;more&lt;/a&gt;...&lt;/p&gt;&lt;p&gt;Today's
+                Free Sample Reading: &lt;a
+                href='http://www.astrology.com/goddess-within/2-p-5111?dst=rss%7Cast_horo%7Cdx_offer'&gt;Express your
+                potential and desires from a woman's point of view. Learn about your personal power and how to express
+                it!&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href='http://www.astrology.com/redir?ice=rss%7Cast_horo%7Cdx_keen&amp;iv_url=http%3A%2F%2Fwww.astrology.com%2Fpsychics'&gt;Is
+                it really over? What romantic adventures are in store for you? Get a Free Psychic Reading today. &lt;/a&gt;&lt;/p&gt;</description>
+            <link>
+                http://www.astrology.com/horoscopes/details/2012-06-25/capricorn-daily-extended?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope
+            </link>
+        </item>
+        <item>
+            <title>Gemini Daily Extended Horoscopes for June 25, 2012</title>
+            <pubDate>Mon, 25 Jun 2012 00:00:00 +0000</pubDate>
+            <description>&lt;p&gt;If you feel good, then the people who love you will also feel good -- so don't feel
+                guilty if you put your desires above other people's today. You deserve some indulgences right now, and
+                you should think about something nice you can do for yourself. Should you treat yourself to a spa day?
+                Or how about going on a weekend trip to one of your favorite places? Whatever you do, do it all the way.
+                This is not the time for cutting corners.&lt;/p&gt;&lt;p&gt;More horoscopes! Check your &lt;a
+                href='http://www.astrology.com/horoscopes/details/2012-06-25/gemini-daily-singles?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily
+                Single's LoveScopes&lt;/a&gt;, &lt;a
+                href='http://www.astrology.com/horoscopes/details/2012-06-25/gemini-daily-couples?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily
+                Couple's LoveScopes&lt;/a&gt;, &lt;a
+                href='http://www.astrology.com/horoscopes/details/2012-06-25/gemini-daily-work?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily
+                CareerScopes&lt;/a&gt;, &lt;a
+                href='http://www.astrology.com/horoscopes/details/2012-06-25/gemini-weekly-romantic?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Weekly
+                RomanticScopes&lt;/a&gt;, &lt;a
+                href='http://www.astrology.com/horoscopes/details/2012-06-01/gemini-monthly-fitness?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Monthly
+                FitnessScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes?dst=rss%7Cast_horo%7Cdx'&gt;more&lt;/a&gt;...&lt;/p&gt;&lt;p&gt;Today's
+                Free Sample Reading: &lt;a
+                href='http://www.astrology.com/personal-astrology-profile/2-p-5052?dst=rss%7Cast_horo%7Cdx_offer'&gt;What
+                makes you unique? Discover a snapshot of the cosmos at your birth and discover planetary forces that
+                shape you.&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a
+                href='http://www.astrology.com/redir?ice=rss%7Cast_horo%7Cdx_keen&amp;iv_url=http%3A%2F%2Fwww.astrology.com%2Fpsychics'&gt;Is
+                it really over? How do you know if you&amp;rsquo;ve met your soul mate? Find out with a Free Psychic
+                Love Reading. &lt;/a&gt;&lt;/p&gt;</description>
+            <link>http://www.astrology.com/horoscopes/details/2012-06-25/gemini-daily-extended?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope</link>
+        </item>
+        <item>
+            <title>Leo Daily Extended Horoscopes for June 25, 2012</title>
+            <pubDate>Mon, 25 Jun 2012 00:00:00 +0000</pubDate>
+            <description>&lt;p&gt;Someone who you thought was on your side, and whom you've been relying on as a
+                confidant, might be acting as a double agent in a relatively trivial caper. If you've been planning an
+                event for a friend, resist the urge to delegate too much to someone who seems just a little bit too
+                eager to help. This person may have an ulterior motive. While you shouldn't doubt the people you love
+                and trust, be a bit wary of people who haven't yet proved themselves to you.&lt;/p&gt;&lt;p&gt;More
+                horoscopes! Check your &lt;a
+                href='http://www.astrology.com/horoscopes/details/2012-06-25/leo-daily-singles?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily
+                Single's LoveScopes&lt;/a&gt;, &lt;a
+                href='http://www.astrology.com/horoscopes/details/2012-06-25/leo-daily-couples?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily
+                Couple's LoveScopes&lt;/a&gt;, &lt;a
+                href='http://www.astrology.com/horoscopes/details/2012-06-25/leo-daily-work?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily
+                CareerScopes&lt;/a&gt;, &lt;a
+                href='http://www.astrology.com/horoscopes/details/2012-06-25/leo-weekly-romantic?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Weekly
+                RomanticScopes&lt;/a&gt;, &lt;a
+                href='http://www.astrology.com/horoscopes/details/2012-06-01/leo-monthly-fitness?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Monthly
+                FitnessScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes?dst=rss%7Cast_horo%7Cdx'&gt;more&lt;/a&gt;...&lt;/p&gt;&lt;p&gt;Today's
+                Free Sample Reading: &lt;a
+                href='http://www.astrology.com/destiny-reading/2-p-5169?dst=rss%7Cast_horo%7Cdx_offer'&gt;Are you making
+                the right decisions? Get the insight of the stars into your life's focus and future now!&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a
+                href='http://www.astrology.com/redir?ice=rss%7Cast_horo%7Cdx_keen&amp;iv_url=http%3A%2F%2Fwww.astrology.com%2Fpsychics'&gt;Is
+                it really over? Afraid of being alone? Find out where your soul mate is hiding with a Free Psychic Love
+                Reading. &lt;/a&gt;&lt;/p&gt;</description>
+            <link>http://www.astrology.com/horoscopes/details/2012-06-25/leo-daily-extended?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope</link>
+        </item>
+        <item>
+            <title>Libra Daily Extended Horoscopes for June 25, 2012</title>
+            <pubDate>Mon, 25 Jun 2012 00:00:00 +0000</pubDate>
+            <description>&lt;p&gt;After a lot of socializing recently, you are finally getting the chance to spend some
+                quality time on your own. You may think you still want to be out and about and enjoying the wild life
+                today, but once you get a little taste of solitude, you will settle into it happily. This inward-focused
+                time is a luxury. Feel free to ignore the rest of the world (as much as you can) and enjoy some
+                introspection and relaxation.&lt;/p&gt;&lt;p&gt;More horoscopes! Check your &lt;a
+                href='http://www.astrology.com/horoscopes/details/2012-06-25/libra-daily-singles?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily
+                Single's LoveScopes&lt;/a&gt;, &lt;a
+                href='http://www.astrology.com/horoscopes/details/2012-06-25/libra-daily-couples?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily
+                Couple's LoveScopes&lt;/a&gt;, &lt;a
+                href='http://www.astrology.com/horoscopes/details/2012-06-25/libra-daily-work?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily
+                CareerScopes&lt;/a&gt;, &lt;a
+                href='http://www.astrology.com/horoscopes/details/2012-06-25/libra-weekly-romantic?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Weekly
+                RomanticScopes&lt;/a&gt;, &lt;a
+                href='http://www.astrology.com/horoscopes/details/2012-06-01/libra-monthly-fitness?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Monthly
+                FitnessScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes?dst=rss%7Cast_horo%7Cdx'&gt;more&lt;/a&gt;...&lt;/p&gt;&lt;p&gt;Today's
+                Free Sample Reading: &lt;a
+                href='http://www.astrology.com/maya-aztec-reading/2-p-5167?dst=rss%7Cast_horo%7Cdx_offer'&gt;Based on
+                the ancient science of Maya-Aztec astrology, delve deep into your inner self with this reading!&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a
+                href='http://www.astrology.com/redir?ice=rss%7Cast_horo%7Cdx_keen&amp;iv_url=http%3A%2F%2Fwww.astrology.com%2Fpsychics'&gt;Is
+                it really over? Need to know the answers? Put your mind at ease. Get a Free Psychic Love Reading today.
+                &lt;/a&gt;&lt;/p&gt;</description>
+            <link>http://www.astrology.com/horoscopes/details/2012-06-25/libra-daily-extended?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope</link>
+        </item>
+        <item>
+            <title>Pisces Daily Extended Horoscopes for June 25, 2012</title>
+            <pubDate>Mon, 25 Jun 2012 00:00:00 +0000</pubDate>
+            <description>&lt;p&gt;You're projecting an aura of calm confidence today -- so who cares if you aren't
+                feeling quite as confident as you look? Image can be a powerful thing, and you can use yours to make
+                waves that turn the tide your way! Your bravado is a mask you can wear to make it through the tough
+                times -- the times when you don't feel completely comfortable. In any new situation you encounter today,
+                try to look as though you know what you're doing, even if you don't.&lt;/p&gt;&lt;p&gt;More horoscopes!
+                Check your &lt;a
+                href='http://www.astrology.com/horoscopes/details/2012-06-25/pisces-daily-singles?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily
+                Single's LoveScopes&lt;/a&gt;, &lt;a
+                href='http://www.astrology.com/horoscopes/details/2012-06-25/pisces-daily-couples?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily
+                Couple's LoveScopes&lt;/a&gt;, &lt;a
+                href='http://www.astrology.com/horoscopes/details/2012-06-25/pisces-daily-work?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily
+                CareerScopes&lt;/a&gt;, &lt;a
+                href='http://www.astrology.com/horoscopes/details/2012-06-25/pisces-weekly-romantic?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Weekly
+                RomanticScopes&lt;/a&gt;, &lt;a
+                href='http://www.astrology.com/horoscopes/details/2012-06-01/pisces-monthly-fitness?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Monthly
+                FitnessScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes?dst=rss%7Cast_horo%7Cdx'&gt;more&lt;/a&gt;...&lt;/p&gt;&lt;p&gt;Today's
+                Free Sample Reading: &lt;a
+                href='http://www.astrology.com/relationship-forecast/2-p-142146?dst=rss%7Cast_horo%7Cdx_offer'&gt;Discover
+                the future of your relationship with a combined natal chart!&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a
+                href='http://www.astrology.com/redir?ice=rss%7Cast_horo%7Cdx_keen&amp;iv_url=http%3A%2F%2Fwww.astrology.com%2Fpsychics'&gt;Is
+                it really over? Find your path to fulfillment with a Free Psychic Love Reading.
+                &lt;/a&gt;&lt;/p&gt;</description>
+            <link>http://www.astrology.com/horoscopes/details/2012-06-25/pisces-daily-extended?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope</link>
+        </item>
+        <item>
+            <title>Sagittarius Daily Extended Horoscopes for June 25, 2012</title>
+            <pubDate>Mon, 25 Jun 2012 00:00:00 +0000</pubDate>
+            <description>&lt;p&gt;With a huge increase in your energy level coming, you run the risk of rushing ahead
+                before you're totally ready to move forward. Beware of leaving the house without a coat, forgetting your
+                keys in the lock or driving to the bank but leaving your wallet at home! Your mind is busy cooking up
+                big ideas and imagining big outcomes -- but you're in danger of forgetting to tie your shoes! Watch for
+                absentmindedness today -- don't lose sight of the here and now!&lt;/p&gt;&lt;p&gt;More horoscopes! Check
+                your &lt;a
+                href='http://www.astrology.com/horoscopes/details/2012-06-25/sagittarius-daily-singles?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily
+                Single's LoveScopes&lt;/a&gt;, &lt;a
+                href='http://www.astrology.com/horoscopes/details/2012-06-25/sagittarius-daily-couples?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily
+                Couple's LoveScopes&lt;/a&gt;, &lt;a
+                href='http://www.astrology.com/horoscopes/details/2012-06-25/sagittarius-daily-work?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily
+                CareerScopes&lt;/a&gt;, &lt;a
+                href='http://www.astrology.com/horoscopes/details/2012-06-25/sagittarius-weekly-romantic?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Weekly
+                RomanticScopes&lt;/a&gt;, &lt;a
+                href='http://www.astrology.com/horoscopes/details/2012-06-01/sagittarius-monthly-fitness?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Monthly
+                FitnessScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes?dst=rss%7Cast_horo%7Cdx'&gt;more&lt;/a&gt;...&lt;/p&gt;&lt;p&gt;Today's
+                Free Sample Reading: &lt;a
+                href='http://www.astrology.com/love-forecast/2-p-142156?dst=rss%7Cast_horo%7Cdx_offer'&gt;Try a preview
+                of your one-week Love Forecast! Make the most out of your love life this year and beyond!&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a
+                href='http://www.astrology.com/redir?ice=rss%7Cast_horo%7Cdx_keen&amp;iv_url=http%3A%2F%2Fwww.astrology.com%2Fpsychics'&gt;Is
+                it really over? Welcome new beginnings with a Free Psychic Love Reading.
+                &lt;/a&gt;&lt;/p&gt;</description>
+            <link>
+                http://www.astrology.com/horoscopes/details/2012-06-25/sagittarius-daily-extended?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope
+            </link>
+        </item>
+        <item>
+            <title>Scorpio Daily Extended Horoscopes for June 25, 2012</title>
+            <pubDate>Mon, 25 Jun 2012 00:00:00 +0000</pubDate>
+            <description>&lt;p&gt;If you're stuck in planning mode today, make it a group affair. Getting a consensus
+                about dates, locations and activities will make everyone feel like part of the big picture -- and it
+                will set a much more positive tone for your upcoming event. Other people will be able to suggest things
+                that you hadn't considered before -- and they will also remember small details that make a big
+                impression. There's no question that a group effort is the best effort.&lt;/p&gt;&lt;p&gt;More
+                horoscopes! Check your &lt;a
+                href='http://www.astrology.com/horoscopes/details/2012-06-25/scorpio-daily-singles?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily
+                Single's LoveScopes&lt;/a&gt;, &lt;a
+                href='http://www.astrology.com/horoscopes/details/2012-06-25/scorpio-daily-couples?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily
+                Couple's LoveScopes&lt;/a&gt;, &lt;a
+                href='http://www.astrology.com/horoscopes/details/2012-06-25/scorpio-daily-work?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily
+                CareerScopes&lt;/a&gt;, &lt;a
+                href='http://www.astrology.com/horoscopes/details/2012-06-25/scorpio-weekly-romantic?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Weekly
+                RomanticScopes&lt;/a&gt;, &lt;a
+                href='http://www.astrology.com/horoscopes/details/2012-06-01/scorpio-monthly-fitness?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Monthly
+                FitnessScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes?dst=rss%7Cast_horo%7Cdx'&gt;more&lt;/a&gt;...&lt;/p&gt;&lt;p&gt;Today's
+                Free Sample Reading: &lt;a
+                href='http://www.astrology.com/year-dragon-financial-forecast/2-p-317138?dst=rss%7Cast_horo%7Cdx_offer'&gt;Check
+                out this forecast, which looks at how you'll fare financially during the Year of the Dragon.&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a
+                href='http://www.astrology.com/redir?ice=rss%7Cast_horo%7Cdx_keen&amp;iv_url=http%3A%2F%2Fwww.astrology.com%2Fpsychics'&gt;Is
+                it really over? Welcome new beginnings with a Free Psychic Love Reading.
+                &lt;/a&gt;&lt;/p&gt;</description>
+            <link>http://www.astrology.com/horoscopes/details/2012-06-25/scorpio-daily-extended?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope</link>
+        </item>
+        <item>
+            <title>Taurus Daily Extended Horoscopes for June 25, 2012</title>
+            <pubDate>Mon, 25 Jun 2012 00:00:00 +0000</pubDate>
+            <description>&lt;p&gt;Your charm will meet its delightful match today, when you run into someone you know
+                through a friend. This person's flattering words and witty conversation will entertain you -- and make
+                you aware of some facets of your personality that you weren't aware of before. Turns out, you are even
+                more charming than you thought! Listening to and laughing with this person could take up your whole day
+                if you let it, so keep an eye on your schedule.&lt;/p&gt;&lt;p&gt;More horoscopes! Check your &lt;a
+                href='http://www.astrology.com/horoscopes/details/2012-06-25/taurus-daily-singles?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily
+                Single's LoveScopes&lt;/a&gt;, &lt;a
+                href='http://www.astrology.com/horoscopes/details/2012-06-25/taurus-daily-couples?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily
+                Couple's LoveScopes&lt;/a&gt;, &lt;a
+                href='http://www.astrology.com/horoscopes/details/2012-06-25/taurus-daily-work?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily
+                CareerScopes&lt;/a&gt;, &lt;a
+                href='http://www.astrology.com/horoscopes/details/2012-06-25/taurus-weekly-romantic?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Weekly
+                RomanticScopes&lt;/a&gt;, &lt;a
+                href='http://www.astrology.com/horoscopes/details/2012-06-01/taurus-monthly-fitness?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Monthly
+                FitnessScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes?dst=rss%7Cast_horo%7Cdx'&gt;more&lt;/a&gt;...&lt;/p&gt;&lt;p&gt;Today's
+                Free Sample Reading: &lt;a
+                href='http://www.astrology.com/numerology-forecast/2-p-5162?dst=rss%7Cast_horo%7Cdx_offer'&gt;Make this
+                year your best year ever! Get a free overview including your Personal Year Number!&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a
+                href='http://www.astrology.com/redir?ice=rss%7Cast_horo%7Cdx_keen&amp;iv_url=http%3A%2F%2Fwww.astrology.com%2Fpsychics'&gt;Is
+                it really over? Need to know the answers? Put your mind at ease. Get a Free Psychic Love Reading today.
+                &lt;/a&gt;&lt;/p&gt;</description>
+            <link>http://www.astrology.com/horoscopes/details/2012-06-25/taurus-daily-extended?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope</link>
+        </item>
+        <item>
+            <title>Virgo Daily Extended Horoscopes for June 25, 2012</title>
+            <pubDate>Mon, 25 Jun 2012 00:00:00 +0000</pubDate>
+            <description>&lt;p&gt;It's the small details that will cause the biggest problems today, so get out your
+                magnifying glass and take a closer look at what's going down today. Little comments a friend whispers to
+                himself or herself will reveal big truths -- so don't pretend you don't hear them. It's time to deal
+                with this issue once and for all, and put negative feelings behind you. It will feel good to get rid of
+                the tiny doubts that you've been having about your relationship.&lt;/p&gt;&lt;p&gt;More horoscopes!
+                Check your &lt;a
+                href='http://www.astrology.com/horoscopes/details/2012-06-25/virgo-daily-singles?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily
+                Single's LoveScopes&lt;/a&gt;, &lt;a
+                href='http://www.astrology.com/horoscopes/details/2012-06-25/virgo-daily-couples?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily
+                Couple's LoveScopes&lt;/a&gt;, &lt;a
+                href='http://www.astrology.com/horoscopes/details/2012-06-25/virgo-daily-work?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Daily
+                CareerScopes&lt;/a&gt;, &lt;a
+                href='http://www.astrology.com/horoscopes/details/2012-06-25/virgo-weekly-romantic?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Weekly
+                RomanticScopes&lt;/a&gt;, &lt;a
+                href='http://www.astrology.com/horoscopes/details/2012-06-01/virgo-monthly-fitness?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope'&gt;Monthly
+                FitnessScopes&lt;/a&gt;, &lt;a href='http://www.astrology.com/horoscopes?dst=rss%7Cast_horo%7Cdx'&gt;more&lt;/a&gt;...&lt;/p&gt;&lt;p&gt;Today's
+                Free Sample Reading: &lt;a
+                href='http://www.astrology.com/day-day-forecast/2-p-279268?dst=rss%7Cast_horo%7Cdx_offer'&gt;Look
+                forward to the coming year with this forecast as your road map. Get a free one-week preview now!&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a
+                href='http://www.astrology.com/redir?ice=rss%7Cast_horo%7Cdx_keen&amp;iv_url=http%3A%2F%2Fwww.astrology.com%2Fpsychics'&gt;Is
+                it really over? What romantic adventures are in store for you? Get a Free Psychic Reading today. &lt;/a&gt;&lt;/p&gt;</description>
+            <link>http://www.astrology.com/horoscopes/details/2012-06-25/virgo-daily-extended?dst=rss%7Cast_horo%7Cdx&amp;play_horoscope=1#video-horoscope</link>
+        </item>
+    </channel>
 </rss>

@@ -1,14 +1,29 @@
-package net.jakubkorab.horo.web;
+/*
+ * Copyright 2012 FuseSource
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 
-import net.jakubkorab.horo.model.Horoscope;
-import net.jakubkorab.horo.web.vo.HoroscopeVO;
-import net.jakubkorab.horo.web.vo.HoroscopesResponseVO;
+package com.fusesource.examples.horo.web;
+
+import com.fusesource.examples.horo.model.Horoscope;
+import com.fusesource.examples.horo.web.vo.HoroscopeVO;
+import com.fusesource.examples.horo.web.vo.HoroscopesResponseVO;
 import org.joda.time.DateTimeZone;
 
 import java.util.ArrayList;
 import java.util.List;
 
-// TODO test
 public class HoroscopeTranslator {
     public HoroscopesResponseVO toHoroscopesResponseVO(List<Horoscope> horoscopes) {
         HoroscopesResponseVO responseVO = new HoroscopesResponseVO();

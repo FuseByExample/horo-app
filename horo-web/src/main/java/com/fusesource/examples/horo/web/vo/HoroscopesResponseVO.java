@@ -14,18 +14,20 @@
  * limitations under the License.
  */
 
-package com.fusesource.examples.horo.model;
+package com.fusesource.examples.horo.web.vo;
 
-public class Feed {
+import javax.xml.bind.annotation.XmlRootElement;
+import java.util.List;
 
-    private String name;
+@XmlRootElement(name = "horoscopeResponse")
+public class HoroscopesResponseVO {
+    private List<HoroscopeVO> horoscopes;
 
-    public String getName() {
-        return name;
+    public List<HoroscopeVO> getHoroscopes() {
+        return horoscopes;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setHoroscopes(List<HoroscopeVO> horoscopes) {
+        this.horoscopes = horoscopes;
     }
-
 }
