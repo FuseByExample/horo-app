@@ -34,5 +34,6 @@
 
     <osgi:reference id="sqlSessionFactory" interface="org.apache.ibatis.session.SqlSessionFactory"
                     filter="(database=horo-app)"/>
+    <osgi:reference id="horoscopeDAO" interface="com.fusesource.examples.horo.db.HoroscopeDAO" />
 
 </beans>
