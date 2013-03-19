@@ -39,6 +39,13 @@
         inner join signs s on (h.sign_id = s.sign_id)
     </select>
 
+    <select id="selectHoroscopesBySign" parameterType="StarSign" resultMap="HoroscopeResult">
+        select h.horoscope_id, s.name, h.predicts_for, h.entry
+        from horoscopes h
+        inner join signs s on (h.sign_id = s.sign_id)
+        where s.name = #{name}
+    </select>
+
     <!-- Insert example, using the Account parameter class -->
     <insert id="insert" parameterType="Horoscope">
         insert into horoscopes (

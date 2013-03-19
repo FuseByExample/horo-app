@@ -27,6 +27,7 @@
     <!-- Use type aliases to avoid typing the full classname every time. -->
     <typeAliases>
         <typeAlias alias="Horoscope" type="com.fusesource.examples.horo.model.Horoscope"/>
+        <typeAlias alias="StarSign" type="com.fusesource.examples.horo.model.StarSign"/>
     </typeAliases>
 
     <typeHandlers>

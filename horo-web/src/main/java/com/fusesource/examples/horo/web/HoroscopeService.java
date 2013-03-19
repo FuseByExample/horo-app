@@ -16,11 +16,13 @@
 
 package com.fusesource.examples.horo.web;
 
+import com.fusesource.examples.horo.db.HoroscopeDAO;
 import com.fusesource.examples.horo.model.Feed;
 import com.fusesource.examples.horo.model.Horoscope;
 import com.fusesource.examples.horo.model.StarSign;
 import com.fusesource.examples.horo.web.vo.HoroscopesResponseVO;
 import org.apache.commons.lang.Validate;
+import org.apache.ibatis.session.SqlSessionFactory;
 import org.joda.time.DateTime;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -41,6 +43,12 @@ public class HoroscopeService {
 
     private static Logger LOG = LoggerFactory.getLogger(HoroscopeService.class);
 
+    private HoroscopeDAO horoscopeDAO;
+
+    public void setHoroscopeDAO(HoroscopeDAO horoscopeDAO) {
+        this.horoscopeDAO = horoscopeDAO;
+    }
+
     public HoroscopeService() {
         LOG.info("Creating HoroscopeService");
     }
@@ -58,18 +66,9 @@ public class HoroscopeService {
     }
 
     private List<Horoscope> getHoroscopes(StarSign starSign) {
-        Horoscope horoscope = new Horoscope();
-        horoscope.setEntry("Your future has cake");
-        horoscope.setPredictsFor(DateTime.now());
-        horoscope.setStarSign(starSign);
-        Feed feed = new Feed();
-        feed.setName("com.astrology");
-        horoscope.setFeed(feed);
-
-        List<Horoscope> horoscopes = new ArrayList<Horoscope>();
-        horoscopes.add(horoscope);
-        // and again
-        horoscopes.add(horoscope);
-        return horoscopes;
+        return this.horoscopeDAO.getHoroscopesBySign(starSign);
     }
+
+
+
 }
