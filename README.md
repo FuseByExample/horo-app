@@ -10,7 +10,7 @@ of areas for discussion that are usually overlooked. These include:
 * setting up MyBatis for data access across OSGi bundles that actively demonstrates the [mybatis](http://www.mybatis.org/core/)
   and [mybatis-spring](http://www.mybatis.org/spring/index.html) documentation, with
     * Spring transaction management for [camel-mybatis](http://camel.apache.org/mybatis.html)
-    * configuration externalised using the OSGi Config Admin mechanisms (property files in the `$SMX_HOME/etc` directory)
+    * configuration externalised using the OSGi Config Admin mechanisms (property files in the `$FUSE_HOME/etc` directory)
     * testing the correctness of data access against an embedded H2 database (contentious and potentially not applicable
       to all your access needs)
 * reuse of expensive resources such as `DataSource`s between disparate bundles through the use of service references
@@ -37,7 +37,7 @@ There are three additional parent projects that simplify the Maven project confi
 Prerequisites
 =============
 
-1. This project has been designed against ServiceMix [4.4.1-fuse-08-15](http://repo.fusesource.com/nexus/content/groups/public/org/apache/servicemix/apache-servicemix/4.4.1-fuse-08-15/)
+1. This project has been designed against JBoss Fuse 6.0.0 (https://access.redhat.com/jbossnetwork/ - registration required)
 2. The database backend requires an instance of Postgres 9.1, though older versions may work fine - all SQL has been
    written to the SQL92 standard. [pgAdmin](http://pgadmin.org/) is a great little tool for doing this all visually if
    you aren't familiar with, or just can't be bothered using, the Postgres command line. To set up the project backend
@@ -55,34 +55,34 @@ Build & Run
 
     <project home> $ mvn clean install
 
-2) Start Fuse ESB
+2) Start JBoss Fuse
 
-    <Fuse ESB home>  $ bin/fuseesb
+    <JBoss Fuse home>  $ bin/fuse
 
 3) Add this projects features.xml config to Fuse from the Console
    (makes it easier to install bundles with all required dependencies)
 
-    FuseESB:karaf@root>  features:addUrl mvn:com.fusesource.examples/horo-features/1.0-SNAPSHOT/xml/features
+    JBossFuse:karaf@root>  features:addUrl mvn:com.fusesource.examples/horo-features/1.0-SNAPSHOT/xml/features
 
 4) Install the project.
 
-    FuseESB:karaf@root> features:install horo-model
-    FuseESB:karaf@root> features:install horo-db
-    FuseESB:karaf@root> features:install horo-rss-reader
-    FuseESB:karaf@root> features:install horo-web
+    JBossFuse:karaf@root> features:install horo-model
+    JBossFuse:karaf@root> features:install horo-db
+    JBossFuse:karaf@root> features:install horo-rss-reader
+    JBossFuse:karaf@root> features:install horo-web
 
    or you can install them al with the feature 'horo-all'
 
-    FuseESB:karaf@root> features:install horo-all
+    JBossFuse:karaf@root> features:install horo-all
 
 
 5) To see what happened look at the JBoss Fuse log file, either from the console
 
-    FuseESB:karaf@root> log:display
+    JBossFuse:karaf@root> log:display
 
    or from the command line
 
-    <Fuse ESB home> $ tail -f data/log/fuseesb.log
+    <JBoss Fuse home> $ tail -f data/log/fuse.log
 
 
 6) To test the WS, you can use your browser and go to the horoscope service
