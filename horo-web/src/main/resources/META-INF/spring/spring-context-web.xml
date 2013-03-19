@@ -32,6 +32,8 @@
         </jaxrs:extensionMappings>
     </jaxrs:server>
 
-    <bean id="horoscopeService" class="com.fusesource.examples.horoweb.HoroscopeService"/>
+    <bean id="horoscopeService" class="com.fusesource.examples.horo.web.HoroscopeService">
+        <property name="horoscopeDAO" ref="horoscopeDAO"/>
+    </bean>
 
 </beans>

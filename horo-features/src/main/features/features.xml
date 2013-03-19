@@ -17,6 +17,7 @@
 
 <features name="horo-features-1.0-SNAPSHOT">
 
+
     <feature name="horo-model" version="1.0-SNAPSHOT">
         <bundle>mvn:com.fusesource.examples/horo-model/1.0-SNAPSHOT</bundle>
         <bundle>mvn:joda-time/joda-time/${joda-time-version}</bundle>
@@ -48,6 +49,19 @@
         <feature version="1.0-SNAPSHOT">horo-model</feature>
         <bundle>mvn:org.springframework/spring-jdbc/${spring-version}</bundle>
         <bundle>mvn:com.fusesource.examples/horo-rss-reader/1.0-SNAPSHOT</bundle>
+    </feature>
+
+    <feature name="horo-web" version="1.0-SNAPSHOT">
+        <feature version="${cxf-version}">cxf</feature>
+        <feature version="1.0-SNAPSHOT">horo-model</feature>
+        <bundle>mvn:com.fusesource.examples/horo-web/1.0-SNAPSHOT</bundle>
+    </feature>
+
+    <feature name="horo-all" version="1.0-SNAPSHOT">
+        <feature version="1.0-SNAPSHOT">horo-model</feature>
+        <feature version="1.0-SNAPSHOT">horo-db</feature>
+        <feature version="1.0-SNAPSHOT">horo-web</feature>
+        <feature version="1.0-SNAPSHOT">horo-rss-reader</feature>
     </feature>
 
 </features>
