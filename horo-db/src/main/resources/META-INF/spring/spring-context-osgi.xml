@@ -61,6 +61,12 @@
         </osgi:service-properties>
     </osgi:service>
 
+    <osgi:service interface="com.fusesource.examples.horo.db.HoroscopeDAO">
+        <bean class="com.fusesource.examples.horo.db.impl.HoroscopeDAOImpl">
+            <property name="sqlSessionFactory" ref="sqlSessionFactory"/>
+        </bean>
+    </osgi:service>
+
     <bean id="exporter" class="org.springframework.jmx.export.MBeanExporter" lazy-init="false">
         <property name="beans">
             <map>

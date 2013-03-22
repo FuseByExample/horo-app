@@ -35,6 +35,7 @@
 
     <properties>
         <osgi-import-package>*,org.postgresql,com.fusesource.examples.horo.model</osgi-import-package>
+        <osgi-private-package>com.fusesource.examples.horo.db.impl</osgi-private-package>
     </properties>
 
     <dependencies>

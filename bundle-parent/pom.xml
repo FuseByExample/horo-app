@@ -31,7 +31,9 @@
 
     <properties>
         <osgi-import-package>*</osgi-import-package>
+        <osgi-private-package></osgi-private-package>
     </properties>
+
 
     <dependencies>
         <dependency>
@@ -77,6 +79,7 @@
                         <Import-Package>${osgi-import-package}</Import-Package>
                         <DynamicImport-Package>${osgi-dynamicimport-package}
                         </DynamicImport-Package>
+                        <Private-Package>${osgi-private-package}</Private-Package>
                     </instructions>
                 </configuration>
             </plugin>
