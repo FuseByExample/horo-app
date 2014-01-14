@@ -35,7 +35,7 @@
         <bundle>mvn:com.fusesource.examples/horo-db/1.0-SNAPSHOT</bundle>
         <bundle>mvn:org.mybatis/mybatis/${mybatis-version}</bundle>
         <bundle>mvn:org.mybatis/mybatis-spring/${mybatis-spring-version}</bundle>
-        <bundle>mvn:org.springframework/spring-jdbc/${spring-version}</bundle>
+        <bundle>mvn:org.springframework/org.springframework.jdbc/${spring-version}</bundle>
         <!-- required by mybatis-spring -->
         <bundle>mvn:org.springframework.batch/spring-batch-infrastructure/${spring-batch-version}</bundle>
     </feature>
@@ -47,7 +47,7 @@
         <feature version="${camel-version}">camel-rss</feature>
         <feature version="${camel-version}">camel-sql</feature>
         <feature version="1.0-SNAPSHOT">horo-model</feature>
-        <bundle>mvn:org.springframework/spring-jdbc/${spring-version}</bundle>
+        <bundle>mvn:org.springframework/org.springframework.jdbc/${spring-version}</bundle>
         <bundle>mvn:com.fusesource.examples/horo-rss-reader/1.0-SNAPSHOT</bundle>
     </feature>
 
