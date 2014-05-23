@@ -43,6 +43,9 @@
 
         <!-- Versions defined in BOM but correspond to missing deps  -->
         <spring-version>3.2.8.RELEASE</spring-version>
+        <camel-version>2.12.0.redhat-610379</camel-version>
+        <cxf-version>2.7.0.redhat-610379</cxf-version>
+
         <commons-logging-version>1.1.1</commons-logging-version>
         <commons-lang-version>2.6</commons-lang-version>
         <spring-batch-version>2.1.9.RELEASE</spring-batch-version>

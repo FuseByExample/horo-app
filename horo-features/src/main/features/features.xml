@@ -17,6 +17,7 @@
 
 <features name="horo-features-1.0-SNAPSHOT">
 
+    <repository>mvn:org.apache.karaf.assemblies.features/spring/2.3.0.redhat-610379/xml/features</repository>
 
     <feature name="horo-model" version="1.0-SNAPSHOT">
         <bundle>mvn:com.fusesource.examples/horo-model/1.0-SNAPSHOT</bundle>
@@ -27,6 +28,7 @@
     <feature name="horo-db" version="1.0-SNAPSHOT">
         <feature version="1.0-SNAPSHOT">horo-model</feature>
         <feature version="${camel-version}">camel-mybatis</feature>
+        <feature>spring-jdbc</feature>
         <bundle>wrap:mvn:postgresql/postgresql/${postgresql-version}</bundle>
         <!--
         <bundle>wrap:mvn:commons-dbcp/commons-dbcp/${commons-dbcp-version}</bundle>
@@ -35,7 +37,6 @@
         <bundle>mvn:com.fusesource.examples/horo-db/1.0-SNAPSHOT</bundle>
         <bundle>mvn:org.mybatis/mybatis/${mybatis-version}</bundle>
         <bundle>mvn:org.mybatis/mybatis-spring/${mybatis-spring-version}</bundle>
-        <bundle>mvn:org.springframework/spring-jdbc/${spring-version}</bundle>
         <!-- required by mybatis-spring -->
         <bundle>mvn:org.springframework.batch/spring-batch-infrastructure/${spring-batch-version}</bundle>
     </feature>
@@ -46,8 +47,8 @@
         <feature version="${camel-version}">camel-xstream</feature>
         <feature version="${camel-version}">camel-rss</feature>
         <feature version="${camel-version}">camel-sql</feature>
+        <feature>spring-jdbc</feature>
         <feature version="1.0-SNAPSHOT">horo-model</feature>
-        <bundle>mvn:org.springframework/spring-jdbc/${spring-version}</bundle>
         <bundle>mvn:com.fusesource.examples/horo-rss-reader/1.0-SNAPSHOT</bundle>
     </feature>
 
