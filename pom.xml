@@ -41,8 +41,8 @@
         <application-name>Horoscope aggregator app</application-name>
         <fusesource-repo>http://repo.fusesource.com/maven2</fusesource-repo>
 
-        <camel-version>2.12.0.redhat-610312</camel-version>
-        <cxf-version>2.7.0.redhat-610312</cxf-version>
+        <camel-version>2.12.0.redhat-610379</camel-version>
+        <cxf-version>2.7.0.redhat-610379</cxf-version>
         
         <mybatis-version>3.1.1</mybatis-version>
         <!-- detemined via camel-mybatis -->
@@ -81,13 +81,20 @@
 
     <repositories>
         <repository>
-            <id>fusesource</id>
-            <url>${fusesource-repo}</url>
+            <id>fusesource.releases</id>
+            <name>FuseSource Release Repository</name>
+            <url>https://repository.jboss.org/nexus/content/repositories/fs-releases/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
         </repository>
         <repository>
             <id>fusesource.ea</id>
-            <name>FuseSource Early Access</name>
-            <url>http://repo.fusesource.com/nexus/content/groups/ea/</url>
+            <name>FuseSource Early Access Release Repository</name>
+            <url>https://repository.jboss.org/nexus/content/groups/ea/</url>
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
@@ -96,11 +103,28 @@
             </releases>
         </repository>
     </repositories>
-
     <pluginRepositories>
         <pluginRepository>
-            <id>fusesource</id>
-            <url>${fusesource-repo}</url>
+            <id>fusesource.releases</id>
+            <name>FuseSource Release Repository</name>
+            <url>https://repository.jboss.org/nexus/content/repositories/fs-releases/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+        <pluginRepository>
+            <id>fusesource.ea</id>
+            <name>FuseSource Early Access Release Repository</name>
+            <url>https://repository.jboss.org/nexus/content/groups/ea/</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
         </pluginRepository>
     </pluginRepositories>
 
