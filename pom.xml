@@ -41,42 +41,46 @@
         <application-name>Horoscope aggregator app</application-name>
         <fusesource-repo>http://repo.fusesource.com/maven2</fusesource-repo>
 
-        <camel-version>2.12.0.redhat-610379</camel-version>
-        <cxf-version>2.7.0.redhat-610379</cxf-version>
+        <camel.version>2.14.0.redhat-620058</camel.version>
+        <cxf.version>3.0.2.redhat-620056</cxf.version>
         
-        <mybatis-version>3.1.1</mybatis-version>
+        <mybatis.version>3.1.1</mybatis.version>
         <!-- detemined via camel-mybatis -->
-        <mybatis-spring-version>1.1.1</mybatis-spring-version>
+        <mybatis.spring.version>1.1.1</mybatis.spring.version>
         <!-- needs to match above; see http://www.mybatis.org/spring/ -->
-        <spring-version>3.2.4.RELEASE</spring-version>
-        <spring-batch-version>2.1.9.RELEASE</spring-batch-version>
+        <spring.version>3.2.11.RELEASE</spring.version>
+        <spring.batch.version>2.1.9.RELEASE</spring.batch.version>
 
         <!-- db -->
-        <postgresql-version>9.1-901.jdbc4</postgresql-version>
-        <c3p0-version>0.9.1.2</c3p0-version>
+        <postgresql.version>9.1-901.jdbc4</postgresql.version>
+        <c3p0.version>0.9.1.2</c3p0.version>
+        <h2.version>1.4.184</h2.version>
 
         <!-- common -->
-        <slf4j-version>1.6.1</slf4j-version>
-        <log4j-version>1.2.16</log4j-version>
-        <junit-version>4.7</junit-version>
-        <commons-lang-version>2.6</commons-lang-version>
-        <joda-time-version>2.1</joda-time-version>
+        <slf4j.version>1.7.10</slf4j.version>
+        <log4j.version>1.2.17</log4j.version>
+        <junit.version>4.11</junit.version>
+        <commons.lang.version>2.6</commons.lang.version>
+        <joda.time.version>2.6</joda.time.version>
 
         <!-- Enforcer plugin version resolution -->
-        <axiom-version>1.2.12</axiom-version>
-        <commons-logging-version>1.1.1</commons-logging-version>
-        <commons-codec-version>1.4</commons-codec-version>
+        <axiom.version>1.2.12</axiom.version>
+        <commons.logging.version>1.1.1</commons.logging.version>
+        <commons.codec.version>1.4</commons.codec.version>
+        <codehaus.woodstox.asl.version>4.4.1</codehaus.woodstox.asl.version>
 
-        <maven-compiler-plugin-version>2.3.2</maven-compiler-plugin-version>
-        <maven-bundle-plugin-version>2.3.4</maven-bundle-plugin-version>
-        <build-plugins-plugin-version>2.5</build-plugins-plugin-version>
-        <build-helper-plugin-version>1.7</build-helper-plugin-version>
-        <maven-resources-plugin-version>2.5</maven-resources-plugin-version>
-        <maven-enforcer-plugin-version>1.1</maven-enforcer-plugin-version>
-        <features-maven-plugin-version>2.2.5</features-maven-plugin-version>
-        <maven-failsafe-plugin-version>2.12</maven-failsafe-plugin-version>
-        <geronimo-activation-spec-version>1.1</geronimo-activation-spec-version>
-        <geronimo-javamail-spec-version>1.7.1</geronimo-javamail-spec-version>
+        <maven.compiler.plugin.version>3.2</maven.compiler.plugin.version>
+        <maven.compiler.source>1.7</maven.compiler.source>
+        <maven.compiler.target>1.7</maven.compiler.target>
+        <maven.bundle.plugin.version>2.3.4</maven.bundle.plugin.version>
+        <build.plugins.plugin.version>2.5</build.plugins.plugin.version>
+        <build.helper.plugin.version>1.7</build.helper.plugin.version>
+        <maven.resources.plugin.version>2.5</maven.resources.plugin.version>
+        <maven.enforcer.plugin.version>1.1</maven.enforcer.plugin.version>
+        <karaf.features.maven.plugin.version>2.4.1</karaf.features.maven.plugin.version>
+        <maven.failsafe.plugin.version>2.12</maven.failsafe.plugin.version>
+        <geronimo.activation.spec.version>1.1</geronimo.activation.spec.version>
+        <geronimo.javamail.spec.version>1.7.1</geronimo.javamail.spec.version>
     </properties>
 
     <repositories>
@@ -134,121 +138,126 @@
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
-                <version>${junit-version}</version>
+                <version>${junit.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>joda-time</groupId>
                 <artifactId>joda-time</artifactId>
-                <version>${joda-time-version}</version>
+                <version>${joda.time.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>org.apache.camel</groupId>
                 <artifactId>camel-http</artifactId>
-                <version>${camel-version}</version>
+                <version>${camel.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.camel</groupId>
                 <artifactId>camel-jetty</artifactId>
-                <version>${camel-version}</version>
+                <version>${camel.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.camel</groupId>
                 <artifactId>camel-xstream</artifactId>
-                <version>${camel-version}</version>
+                <version>${camel.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>org.apache.camel</groupId>
                 <artifactId>camel-core</artifactId>
-                <version>${camel-version}</version>
+                <version>${camel.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.camel</groupId>
                 <artifactId>camel-spring</artifactId>
-                <version>${camel-version}</version>
+                <version>${camel.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.camel</groupId>
                 <artifactId>camel-rss</artifactId>
-                <version>${camel-version}</version>
+                <version>${camel.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.camel</groupId>
                 <artifactId>camel-test</artifactId>
-                <version>${camel-version}</version>
+                <version>${camel.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>org.apache.camel</groupId>
                 <artifactId>camel-mybatis</artifactId>
-                <version>${camel-version}</version>
+                <version>${camel.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.mybatis</groupId>
                 <artifactId>mybatis</artifactId>
-                <version>${mybatis-version}</version>
+                <version>${mybatis.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.mybatis</groupId>
                 <artifactId>mybatis-spring</artifactId>
-                <version>${mybatis-spring-version}</version>
+                <version>${mybatis.spring.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>org.apache.ws.commons.axiom</groupId>
                 <artifactId>axiom-api</artifactId>
-                <version>${axiom-version}</version>
+                <version>${axiom.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.ws.commons.axiom</groupId>
                 <artifactId>axiom-impl</artifactId>
-                <version>${axiom-version}</version>
+                <version>${axiom.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>commons-lang</groupId>
                 <artifactId>commons-lang</artifactId>
-                <version>${commons-lang-version}</version>
+                <version>${commons.lang.version}</version>
             </dependency>
             <dependency>
                 <groupId>commons-logging</groupId>
                 <artifactId>commons-logging</artifactId>
-                <version>${commons-logging-version}</version>
+                <version>${commons.logging.version}</version>
             </dependency>
             <dependency>
                 <groupId>commons-codec</groupId>
                 <artifactId>commons-codec</artifactId>
-                <version>${commons-codec-version}</version>
+                <version>${commons.codec.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-api</artifactId>
-                <version>${slf4j-version}</version>
+                <version>${slf4j.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-log4j12</artifactId>
-                <version>${slf4j-version}</version>
+                <version>${slf4j.version}</version>
             </dependency>
             <dependency>
                 <groupId>log4j</groupId>
                 <artifactId>log4j</artifactId>
-                <version>${log4j-version}</version>
+                <version>${log4j.version}</version>
             </dependency>
 
             <!--needed for Dependency convergence-->
             <dependency>
                 <groupId>org.apache.geronimo.specs</groupId>
                 <artifactId>geronimo-javamail_1.4_spec</artifactId>
-                <version>${geronimo-javamail-spec-version}</version>
+                <version>${geronimo.javamail.spec.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.geronimo.specs</groupId>
                 <artifactId>geronimo-activation_1.1_spec</artifactId>
-                <version>${geronimo-activation-spec-version}</version>
+                <version>${geronimo.activation.spec.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.codehaus.woodstox</groupId>
+                <artifactId>woodstox-core-asl</artifactId>
+                <version>${codehaus.woodstox.asl.version}</version>
             </dependency>
 
 
@@ -256,39 +265,39 @@
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-core</artifactId>
-                <version>${spring-version}</version>
+                <version>${spring.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-beans</artifactId>
-                <version>${spring-version}</version>
+                <version>${spring.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-context</artifactId>
-                <version>${spring-version}</version>
+                <version>${spring.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-aop</artifactId>
-                <version>${spring-version}</version>
+                <version>${spring.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-tx</artifactId>
-                <version>${spring-version}</version>
+                <version>${spring.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-jdbc</artifactId>
-                <version>${spring-version}</version>
+                <version>${spring.version}</version>
             </dependency>
             <!-- testing -->
 
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-test</artifactId>
-                <version>${spring-version}</version>
+                <version>${spring.version}</version>
             </dependency>
 
         </dependencies>
@@ -300,10 +309,10 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
-                    <version>${maven-compiler-plugin-version}</version>
+                    <version>${maven.compiler.plugin.version}</version>
                     <configuration>
-                        <source>1.6</source>
-                        <target>1.6</target>
+                        <source>${maven.compiler.source}</source>
+                        <target>${maven.compiler.target}</target>
                     </configuration>
                 </plugin>
 
@@ -311,7 +320,7 @@
                 <plugin>
                     <groupId>org.apache.felix</groupId>
                     <artifactId>maven-bundle-plugin</artifactId>
-                    <version>${maven-bundle-plugin-version}</version>
+                    <version>${maven.bundle.plugin.version}</version>
                     <extensions>true</extensions>
                     <configuration>
                         <instructions>
@@ -323,7 +332,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-enforcer-plugin</artifactId>
-                    <version>${maven-enforcer-plugin-version}</version>
+                    <version>${maven.enforcer.plugin.version}</version>
                     <executions>
                         <execution>
                             <id>enforce</id>
@@ -342,13 +351,13 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-resources-plugin</artifactId>
-                    <version>${maven-resources-plugin-version}</version>
+                    <version>${maven.resources.plugin.version}</version>
                 </plugin>
 
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-failsafe-plugin</artifactId>
-                    <version>${maven-failsafe-plugin-version}</version>
+                    <version>${maven.failsafe.plugin.version}</version>
                     <executions>
                         <execution>
                             <goals>

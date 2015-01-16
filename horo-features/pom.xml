@@ -63,7 +63,7 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>build-helper-maven-plugin</artifactId>
-                <version>${build-helper-plugin-version}</version>
+                <version>${build.helper.plugin.version}</version>
                 <executions>
                     <execution>
                         <id>attach-artifacts</id>
@@ -88,7 +88,7 @@
             <plugin>
                 <groupId>org.apache.karaf.tooling</groupId>
                 <artifactId>features-maven-plugin</artifactId>
-                <version>${features-maven-plugin-version}</version>
+                <version>${karaf.features.maven.plugin.version}</version>
                 <executions>
                     <execution>
                         <id>create-kar</id>
