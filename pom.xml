@@ -65,17 +65,17 @@
 
         <!-- Enforcer plugin version resolution -->
         <axiom.version>1.2.12</axiom.version>
-        <commons.logging.version>1.1.1</commons.logging.version>
+        <commons.logging.version>1.2</commons.logging.version>
         <commons.codec.version>1.4</commons.codec.version>
         <codehaus.woodstox.asl.version>4.4.1</codehaus.woodstox.asl.version>
 
         <maven.compiler.plugin.version>3.2</maven.compiler.plugin.version>
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
-        <maven.bundle.plugin.version>2.3.4</maven.bundle.plugin.version>
+        <maven.bundle.plugin.version>2.3.7</maven.bundle.plugin.version>
         <build.plugins.plugin.version>2.5</build.plugins.plugin.version>
-        <build.helper.plugin.version>1.7</build.helper.plugin.version>
-        <maven.resources.plugin.version>2.5</maven.resources.plugin.version>
+        <build.helper.maven.plugin.version>1.9.1</build.helper.maven.plugin.version>
+        <maven.resources.plugin.version>2.7</maven.resources.plugin.version>
         <maven.enforcer.plugin.version>1.1</maven.enforcer.plugin.version>
         <karaf.features.maven.plugin.version>2.4.1</karaf.features.maven.plugin.version>
         <maven.failsafe.plugin.version>2.12</maven.failsafe.plugin.version>
