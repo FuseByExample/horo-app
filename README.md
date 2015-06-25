@@ -37,7 +37,7 @@ There are three additional parent projects that simplify the Maven project confi
 Prerequisites
 =============
 
-1. This project has been designed against JBoss Fuse 6.1.0 (https://access.redhat.com/jbossnetwork/ - registration required)
+1. This project has been designed against JBoss Fuse 6.2.0 (https://access.redhat.com/jbossnetwork/ - registration required)
 2. The database backend requires an instance of Postgres 9.1, though older versions may work fine - all SQL has been
    written to the SQL92 standard. [pgAdmin](http://pgadmin.org/) is a great little tool for doing this all visually if
    you aren't familiar with, or just can't be bothered using, the Postgres command line. To set up the project backend
