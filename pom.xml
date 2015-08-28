@@ -41,8 +41,8 @@
         <application-name>Horoscope aggregator app</application-name>
         <fusesource-repo>http://repo.fusesource.com/maven2</fusesource-repo>
 
-        <camel.version>2.15.1.redhat-620133</camel.version>
-        <cxf.version>3.0.4.redhat-620133</cxf.version>
+        <camel.version>2.15.1.redhat-621026</camel.version>
+        <cxf.version>3.0.4.redhat-621026</cxf.version>
         
         <mybatis.version>3.1.1</mybatis.version>
         <!-- detemined via camel-mybatis -->
