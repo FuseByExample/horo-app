@@ -1,3 +1,6 @@
+NOTE: This project is not supported on JBoss Fuse version 6.3 or later
+-----------------------------------------------------------------------
+
 This project presents a sample app for aggregating and re-presenting horoscopes. It is designed to highlight a number
 of areas for discussion that are usually overlooked. These include:
 
